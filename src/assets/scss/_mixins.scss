@@ -1,6 +1,15 @@
+
+@mixin titles($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+    margin-bottom: 30px;
+    font-family: $secondary-font-regular;
+}
+    
+
 @mixin display-flex($gap) {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     gap: $gap;
 }
