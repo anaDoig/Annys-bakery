@@ -6,19 +6,19 @@ body {
 }
 
 h1 {
-    @include titles(26px, 26px);
+    @include titles(26px, 26px, 30px);
 }
 
 h2 {
-    @include titles(48px, 48px);
+    @include titles(48px, 48px, 15px);
 }
 
 h3 {
-    @include titles(30px, 30px);
+    @include titles(30px, 30px, 25px);
 }
 
 h4 {
-    @include titles(26px, 26px);
+    @include titles(26px, 26px, 20px);
 }
 
 a {
@@ -34,11 +34,18 @@ figure {
     }
 }
 
+.bg-green {
+    background-color: $green;
+}
+
+.bg-mauve {
+    background-color: $green;
+}
+
 .main-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid #ccc;
 
     &.center {
         text-align: center;
@@ -51,11 +58,4 @@ figure {
     .col {
         flex-basis: calc( 25% - $gutter);
     }
-
-    @media screen and (max-width: $mobile-breakpoint)  {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-}
-
-
+}   

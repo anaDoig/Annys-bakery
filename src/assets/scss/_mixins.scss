@@ -1,8 +1,8 @@
 
-@mixin titles($font-size, $line-height) {
+@mixin titles($font-size, $line-height, $margin-bottom) {
     font-size: $font-size;
     line-height: $line-height;
-    margin-bottom: 30px;
+    margin-bottom: $margin-bottom;
     font-family: $secondary-font-regular;
 }
     
@@ -12,4 +12,9 @@
     justify-content: center;
     flex-direction: row;
     gap: $gap;
+
+    @media screen and (max-width: $mobile-breakpoint)  {
+        flex-direction: column;
+        padding: 0 20px;
+    }
 }
