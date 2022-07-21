@@ -53,9 +53,26 @@ figure {
 }
 
 .column-container {
-    @include display-flex($gutter);
+    @include display-flex($gutter, center);
 
     .col {
         flex-basis: calc( 25% - $gutter);
     }
-}   
+}
+
+.col-2 {
+    @include display-flex(15px, space-between);
+
+    .col {
+        flex-basis: calc( 50% - 15px);
+
+    }
+}
+
+.col-3 {
+    @include display-flex(20px, space-between);
+
+    .col {
+        flex-basis: calc( 33.3% - 20px);
+    }
+}
