@@ -1,0 +1,38 @@
+{
+  "cakes": [
+    {
+      "name": "Carrot cake",
+      "id": 1,
+      "price": 12,
+      "img": "https://pemberleycupandcakes.com/wp-content/uploads/2016/02/carrot_cake_1.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    }
+  ],
+  "cookies": [
+    {
+      "name": "Carrot cake",
+      "id": 1,
+      "price": 12,
+      "img": "https://pemberleycupandcakes.com/wp-content/uploads/2016/02/carrot_cake_1.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    }
+  ],
+  "cupcakes": [
+    {
+      "name": "Carrot cake",
+      "id": 1,
+      "price": 12,
+      "img": "https://pemberleycupandcakes.com/wp-content/uploads/2016/02/carrot_cake_1.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    }
+  ]
+}
