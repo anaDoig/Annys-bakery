@@ -1,0 +1,310 @@
+{
+  "cakes": [
+    {
+      "name": "Chocolate cake",
+      "id": 1,
+      "price": 40,
+      "img": "https://i.imgur.com/8cNLZ4K.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Letter cake",
+      "id": 2,
+      "price": 35,
+      "img": "https://i.imgur.com/s3LtuGD.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Meme cake",
+      "id": 3,
+      "price": 35,
+      "img": "https://i.imgur.com/AxiXyAR.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Rainbow cake",
+      "id": 4,
+      "price": 35,
+      "img": "https://i.imgur.com/CyDbU6f.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Tennis cake",
+      "id": 5,
+      "price": 45,
+      "img": "https://i.imgur.com/dTFm1dn.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Tropical cake",
+      "id": 6,
+      "price": 45,
+      "img": "https://i.imgur.com/JZNpOWy.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Unicorn cake",
+      "id": 7,
+      "price": 45,
+      "img": "https://i.imgur.com/aqJiQTn.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Universe cake",
+      "id": 8,
+      "price": 40,
+      "img": "https://i.imgur.com/VWSgIPS.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Wedding cake",
+      "id": 9,
+      "price": 45,
+      "img": "https://i.imgur.com/h1hdNWe.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    },
+    {
+      "name": "Word Party cake",
+      "id": 10,
+      "price": 45,
+      "img": "https://i.imgur.com/XcdFTkQ.jpg",
+      "size": {
+        "small": 6,
+        "big": 8
+      }
+    }
+  ],
+
+  "cookies": [
+    {
+      "name": "Nutella cookies",
+      "id": 1,
+      "price": 12,
+      "img": "https://i.imgur.com/CUg1ekI.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Almond cookies",
+      "id": 2,
+      "price": 12,
+      "img": "https://i.imgur.com/DYHgYm3.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Polvorones cookies",
+      "id": 3,
+      "price": 12,
+      "img": "https://i.imgur.com/e5x99uq.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Red Velvet cookies",
+      "id": 4,
+      "price": 12,
+      "img": "https://i.imgur.com/4NLoDj0.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Peanuts cookies",
+      "id": 10,
+      "price": 12,
+      "img": "https://i.imgur.com/emgEwJm.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Sailors cookies",
+      "id": 5,
+      "price": 14,
+      "img": "https://i.imgur.com/8Ual0rc.png",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Science cookies",
+      "id": 6,
+      "price": 14,
+      "img": "https://i.imgur.com/xcqSagX.png",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Unicorn cookies",
+      "id": 7,
+      "price": 14,
+      "img": "https://i.imgur.com/FbklPOx.png",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Icecream cookies",
+      "id": 8,
+      "price": 14,
+      "img": "https://i.imgur.com/zoU80jh.png",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Tropical cookies",
+      "id": 9,
+      "price": 14,
+      "img": "https://i.imgur.com/vSNnQkD.png",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    }
+  ],
+
+  "cupcakes": [
+    {
+      "name": "Carrot cupcakes",
+      "id": 1,
+      "price": 14,
+      "img": "https://i.imgur.com/2OR9ill.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Chips&cookies cupcakes",
+      "id": 2,
+      "price": 14,
+      "img": "https://i.imgur.com/oMH2Whr.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Chocolate cupcakes",
+      "id": 3,
+      "price": 14,
+      "img": "https://i.imgur.com/3DjmD3N.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Lemon cupcakes",
+      "id": 4,
+      "price": 14,
+      "img": "https://i.imgur.com/FSbiAJq.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Oreo cupcakes",
+      "id": 5,
+      "price": 14,
+      "img": "https://i.imgur.com/LkvJcnL.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Sailors cupcakes",
+      "id": 6,
+      "price": 16,
+      "img": "https://i.imgur.com/1rrTFt9.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Unicorn cupcakes",
+      "id": 7,
+      "price": 16,
+      "img": "https://i.imgur.com/WJCpHNs.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Owl cupcakes",
+      "id": 8,
+      "price": 16,
+      "img": "https://i.imgur.com/jkx96Q3.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Board cupcakes",
+      "id": 9,
+      "price": 16,
+      "img": "https://i.imgur.com/QSsEolH.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    },
+    {
+      "name": "Minnie cupcakes",
+      "id": 10,
+      "price": 16,
+      "img": "https://i.imgur.com/WlYw4b1.jpg",
+      "size": {
+        "small": 6,
+        "big": 12
+      }
+    }
+  ]
+}

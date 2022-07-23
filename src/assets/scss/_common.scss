@@ -1,6 +1,28 @@
 body {
     font-family: $main-font-regular;
     font-size: $font-size;
+    line-height: $font-size;
+    color: $black;
+}
+
+h1 {
+    @include titles(26px, 26px, 30px);
+}
+
+h2 {
+    @include titles(48px, 48px, 15px);
+}
+
+h3 {
+    @include titles(30px, 30px, 25px);
+}
+
+h4 {
+    @include titles(26px, 26px, 20px);
+}
+
+a {
+    color: $black;
 }
 
 figure {
@@ -12,39 +34,45 @@ figure {
     }
 }
 
+.bg-green {
+    background-color: $green;
+}
+
+.bg-mauve {
+    background-color: $green;
+}
+
 .main-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid #ccc;
 
     &.center {
         text-align: center;
     }
 }
 
+.column-container {
+    @include display-flex($gutter, center);
+
+    .col {
+        flex-basis: calc( 25% - $gutter);
+    }
+}
+
 .col-2 {
-    @include display-flex(15px);
+    @include display-flex(15px, space-between);
 
     .col {
         flex-basis: calc( 50% - 15px);
 
     }
-
-    @media screen and (max-width: 768px)  {
-        flex-direction: column;
-    }
 }
 
 .col-3 {
-    @include display-flex(20px);
+    @include display-flex(20px, space-between);
 
     .col {
         flex-basis: calc( 33.3% - 20px);
     }
-
-    @media screen and (max-width: 768px)  {
-        flex-direction: column;
-    }
 }
-
