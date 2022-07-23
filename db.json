@@ -101,7 +101,6 @@
       }
     }
   ],
-
   "cookies": [
     {
       "name": "Nutella cookies",
@@ -204,7 +203,6 @@
       }
     }
   ],
-
   "cupcakes": [
     {
       "name": "Carrot cupcakes",
@@ -305,6 +303,14 @@
         "small": 6,
         "big": 12
       }
+    }
+  ],
+  "shoppingCart": [
+    {
+      "producto": "termo",
+      "valor": 12,
+      "id": 12,
+      "quantity": 10
     }
   ]
 }

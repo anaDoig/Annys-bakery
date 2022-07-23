@@ -21,7 +21,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run db\"",
     "dev": "react-scripts start",
-    "db": "json-server ./products.json --wacht  -p 4000",
+    "db": "json-server --watch db.json -p 4000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
