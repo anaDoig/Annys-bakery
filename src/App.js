@@ -5,6 +5,7 @@ import  Contact from './pages/Contact/Contact';
 import  Products  from './pages/Products/Products';
 import  LogIn from './pages/LogIn/LogIn';
 import  ShoppingCart  from './pages/ShoppingCart/ShoppingCart';
+import Prueba from './components/Prueba/Prueba'
 import { Route, Routes } from "react-router-dom"
 import Menu from "./Menu"
 
@@ -23,7 +24,7 @@ function App() {
               <Route path="/shoppingcart" element={<ShoppingCart />} />
             </Routes>
           </div>
-
+        <Prueba></Prueba>
 
     </>
   )
