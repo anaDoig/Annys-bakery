@@ -1,5 +1,10 @@
 import './Home.scss';
+import Hero from '../Hero/Hero.jsx';
 
-export default function Home() {
-    return <h1>Home</h1>
+const Home = () => {
+    return (
+      <Hero/>
+    )
   }
+
+export default Home;
