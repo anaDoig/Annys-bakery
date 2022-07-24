@@ -1,4 +1,4 @@
-import "./ShoppingCart.scss";
+import "./ShjoppingCart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, getListCart, updateItemCart } from "../../modules/shoppingCart/actions";
 import { getShoppingCart } from "../../modules/shoppingCart/selectors";
