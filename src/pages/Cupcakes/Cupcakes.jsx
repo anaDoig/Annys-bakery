@@ -1,10 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './Cupcakes.scss';
+import { fetchCupcakes } from "../../modules/cupcakes/actions";
+import { getCupcakes } from "../../modules/cupcakes/selectors";
+
 
 const Cupcakes = () => {
+
+    const dispatch = useDispatch();
+    const { cupcakes, loading, errors } = useSelector(getCupcakes);
+
+    useEffect(() => {
+        dispatch(fetchCupcakes());
+    }, []);
+
+    console.log(cupcakes);
+
     return (
-        <section className="cookies bg-green">
+        <section className="cookies bg-mauve">
             <div className="main-container">
             <div className="products-hero col-2">
                 <div className="col">
@@ -23,7 +38,7 @@ const Cupcakes = () => {
                 </div>
                 <div className="col">
                     <figure>
-                        <img src="https://i.imgur.com/c7hW5L6.jpeg"></img>
+                        <img src="https://i.imgur.com/0jOBZtn.jpeg"></img>
                     </figure>
                 </div>
             </div>
