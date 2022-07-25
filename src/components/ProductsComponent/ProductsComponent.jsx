@@ -1,6 +1,6 @@
 import './ProductsComponent.scss';
 
-const Prueba = () => {
+const ProductsComponent = () => {
     return (
         <section>
         <div className='products'>
@@ -87,4 +87,4 @@ const Prueba = () => {
 
 }
 
-export default Prueba;
+export default ProductsComponent;
