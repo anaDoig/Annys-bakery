@@ -10,16 +10,17 @@ h1 {
 }
 
 h2 {
-    @include titles(48px, 48px, 15px);
+    @include titles(52px, 48px, 15px);
 }
 
 h3 {
-    @include titles(30px, 30px, 25px);
+    @include titles(40px, 30px, 25px);
 }
 
 h4 {
     @include titles(26px, 26px, 20px);
 }
+
 
 a {
     color: $black;
@@ -42,6 +43,13 @@ figure {
 
 .bg-mauve {
     background-color: $mauve;
+}
+
+.bg-multicolor {
+    background-image: url('../img/bg-image.png');
+    height: 400px;
+    background-position: center; 
+    background-size: cover; 
 }
 
 .title-container{
@@ -119,6 +127,19 @@ figure {
     }
 }
 
+.main-container-fullwidth {
+    width: 100%;
+    margin: 0 auto;
+
+    &.center {
+        text-align: center;
+    }
+}
+
+.section-header{
+    padding-top: 100px;
+}
+
 .column-container {
     @include display-flex($gutter, center);
 
@@ -132,7 +153,6 @@ figure {
 
     .col {
         flex-basis: calc( 50% - 15px);
-
     }
 }
 
