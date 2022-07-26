@@ -8,13 +8,12 @@ import cart from './assets/img/shopping-cart.png'
 export default function Navbar() {
     
     return (
-
         <nav>
             <div className="left-menu">
                 <ul>
-                    <li><CustomLink to="/products">PRODUCTS</CustomLink></li>
-                    <li><CustomLink to="/aboutus">ABOUT US</CustomLink></li>
-                    <li><CustomLink to="/contact">CONTACT</CustomLink></li>
+                    <li><CustomLink to="/products">PRODUCTOS</CustomLink></li>
+                    <li><CustomLink to="/aboutus">SOBRE NOSOTRAS</CustomLink></li>
+                    <li><CustomLink to="/contact">CONTACTO</CustomLink></li>
                 </ul>
             </div>
             
