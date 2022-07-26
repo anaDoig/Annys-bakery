@@ -13,17 +13,15 @@ function App() {
   return (
     <>
       <Menu />
-      <div className='navbar'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/aboutus' element={<AboutUs />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<LogIn />} />
-          <Route path='/shoppingcart' element={<ShoppingCart />} />
-        </Routes>
-      </div>
-      <Prueba></Prueba>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/aboutus' element={<AboutUs />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<LogIn />} />
+        <Route path='/shoppingcart' element={<ShoppingCart />} />
+      </Routes>
+      {/* <Prueba></Prueba> */}
     </>
   );
 }

@@ -1,0 +1,42 @@
+@import "../../assets/scss/styles.scss";
+
+
+.col-2 {
+  .col {
+  }
+
+  .col:first-child {
+    flex-basis: calc(70% - $gutter);
+    border: 1px solid;
+    display: grid;
+    gap: $gutter;
+  }
+  .col:last-child {
+    flex-basis: 30%;
+    border: 1px solid;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.image {
+  width: 160px;
+  aspect-ratio: 1.5/1;
+}
+// .container-option{
+//   display: flex;
+//   gap: 12px;
+// }
+.remove {
+  width: 15px;
+}
+// .title
+// .size

@@ -23,11 +23,19 @@
     {
       "name": "Meme cake",
       "id": 3,
-      "price": 35,
       "img": "https://i.imgur.com/AxiXyAR.jpg",
+      "price": {
+        "whole": 500,
+        "half": 250
+      },
       "size": {
-        "small": 6,
-        "big": 8
+        "whole": "whole",
+        "half": "half"
+      },
+      "unity": {
+        "whole": "docena",
+        "half": "1/2 docena",
+        "unique": "porcion"
       }
     },
     {
@@ -297,20 +305,33 @@
     {
       "name": "Minnie cupcakes",
       "id": 10,
-      "price": 16,
+      "price": {
+        "half": "",
+        "whole": ""
+      },
       "img": "https://i.imgur.com/WlYw4b1.jpg",
       "size": {
-        "small": 6,
-        "big": 12
+        "small": "half",
+        "big": "whole"
       }
     }
   ],
   "shoppingCart": [
     {
-      "producto": "termo",
-      "valor": 12,
-      "id": 12,
-      "quantity": 10
+      "name": "Board cupcakes",
+      "id": 9,
+      "price": 16,
+      "img": "https://i.imgur.com/QSsEolH.jpg",
+      "size": "6 und",
+      "quantity": 3
+    },
+    {
+      "name": "Minnie cupcakes",
+      "id": 10,
+      "price": 16,
+      "img": "https://i.imgur.com/WlYw4b1.jpg",
+      "size": "4/5 raciones",
+      "quantity": 6
     }
   ]
 }

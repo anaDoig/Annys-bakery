@@ -1,10 +1,15 @@
-import "./ShjoppingCart.scss";
+import "./ShoppingCart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, getListCart, updateItemCart } from "../../modules/shoppingCart/actions";
 import { getShoppingCart } from "../../modules/shoppingCart/selectors";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { IconTrash } from "../../components/Icon/IconTrash";
+
+const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
 
 const ShoppingCart = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { items, isLoading, error } = useSelector(getShoppingCart);
 
@@ -25,28 +30,44 @@ const ShoppingCart = () => {
 
   return (
     <>
-      {items.map(({ producto, valor, id, quantity }) => (
-        <div key={id}>
-          <div>
-            <img src='' alt='' />
+      <div className='main-container'>
+        <div className='col-2'>
+          <div className='col'>
+            {items.map(({ name, id, price, img, size, quantity }) => (
+              <div key={id}>
+                <div className='container'>
+                  <img className='image' src={img} alt='' />
+                  <div className='container-option'>
+                    <h4 className='title'>{name}</h4>
+                    <p className='size'>Tamaño: {size}</p>
+                  </div>
+                  <select onChange={(event) => handleUpdate(id, event.target.value)} value={quantity} className='quantity' name='quantity'>
+                    {Array.from({ length: 9 }).map((_, index) => (
+                      <option key={`option_${index}`} value={index + 1}>
+                        Cant : {index + 1}
+                      </option>
+                    ))}
+                  </select>
+                  <p className='price'>{price}€</p>
+                  <div onClick={() => handleRemove(id)}>
+                    <IconTrash width={25} heigth={25} fill='red' />
+                  </div>
+                </div>
+              </div>
+            ))}
+            <button onClick={() => navigate("/products")}>Seguir comprando</button>
           </div>
-          <div>
-            <h3 className='title'>{producto}</h3>
-            <p className='size'></p>
-            <button onClick={() => handleUpdate(id, 10)} className='amount'>
-              {" "}
-              cantidad
-            </button>
-            <button onClick={() => handleRemove(id)} className='remove'>
-              X
-            </button>
-          </div>
-          <div>
-            <h2 className='price'>{valor}</h2>
-            <h2 className='price'>{quantity}</h2>
+
+          <div className='col right'>
+            <h1>total del carrito</h1>
+            <div>
+              <span>Subtotal </span>
+              <span>{calculateTotal(items)}</span>
+            </div>
+            <button>finalizar compra</button>
           </div>
         </div>
-      ))}
+      </div>
     </>
   );
 };
