@@ -1,15 +1,15 @@
-@import "../../assets/scss/styles.scss";
+@import '../../assets/scss/styles.scss';
 
 .bg-multicolor {
-    height: 400px;
+	height: 400px;
 
-    background-image: url('../../assets/img/bg-image.png');
-    background-position: center; 
-    background-size: cover; 
+	background-image: url('../../assets/img/bg-image.png');
+	background-position: center;
+	background-size: cover;
 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

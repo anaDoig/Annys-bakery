@@ -1,20 +1,18 @@
-
 @mixin titles($font-size, $line-height, $margin-bottom) {
-    font-size: $font-size;
-    line-height: $line-height;
-    margin-bottom: $margin-bottom;
-    font-family: $secondary-font-bold;
+	font-size: $font-size;
+	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	font-family: $secondary-font-bold;
 }
-    
 
 @mixin display-flex($gutter, $justify-content) {
-    display: flex;
-    justify-content: $justify-content;
-    flex-direction: row;
-    gap: $gutter;
+	display: flex;
+	justify-content: $justify-content;
+	flex-direction: row;
+	gap: $gutter;
 
-    @media screen and (max-width: $mobile-breakpoint)  {
-        flex-direction: column;
-        padding: 0 20px;
-    }
+	@media screen and (max-width: $mobile-breakpoint) {
+		flex-direction: column;
+		padding: 0 20px;
+	}
 }

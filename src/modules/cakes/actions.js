@@ -3,31 +3,30 @@ export const FETCH_CAKES_OK = 'FETCH_CAKES_OK';
 export const FETCH_CAKES_ERROR = 'FETCH_CAKES_ERROR';
 
 export const actionFetchCakes = () => ({
-    type: FETCH_CAKES,
-})
+	type: FETCH_CAKES,
+});
 
 export const actionFetchCakesOk = (cakes) => ({
-    type: FETCH_CAKES_OK,
-    payload: cakes,
-})
+	type: FETCH_CAKES_OK,
+	payload: cakes,
+});
 
 export const actionFetchCakesError = () => ({
-    type: FETCH_CAKES_ERROR,
-})
+	type: FETCH_CAKES_ERROR,
+});
 
 export function fetchCakes() {
-    return async (dispatch) => {
+	return async (dispatch) => {
+		dispatch(actionFetchCakes());
 
-        dispatch(actionFetchCakes());
-
-        try {
-            const response = await fetch('http://localhost:4000/cakes');
-            const data = await response.json();
-            dispatch(actionFetchCakesOk(data));
-        } catch (error) {
-            dispatch(actionFetchCakesError);
-        }
-    }
+		try {
+			const response = await fetch('http://localhost:4000/cakes');
+			const data = await response.json();
+			dispatch(actionFetchCakesOk(data));
+		} catch (error) {
+			dispatch(actionFetchCakesError);
+		}
+	};
 }
 
 // export const getProducts = (cookies) => dispatch => {

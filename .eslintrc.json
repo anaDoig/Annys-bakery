@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:react/jsx-runtime"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+
+  "plugins": ["react"],
+  "rules": {
+    "no-tabs": "off",
+    "indent": ["off", 2, { "SwitchCase": 1 }],
+    "no-mixed-spaces-and-tabs": "error",
+    "object-curly-newline": "off",
+    "default-param-last": "off",
+    "react/jsx-indent": "off"
+  }
+}

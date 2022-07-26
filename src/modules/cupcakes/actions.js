@@ -3,31 +3,30 @@ export const FETCH_CUPCAKES_OK = 'FETCH_CUPCAKES_OK';
 export const FETCH_CUPCAKES_ERROR = 'FETCH_CUPCAKES_ERROR';
 
 export const actionFetchCupcakes = () => ({
-    type: FETCH_CUPCAKES,
-})
+	type: FETCH_CUPCAKES,
+});
 
 export const actionFetchCupcakesOk = (cupcakes) => ({
-    type: FETCH_CUPCAKES_OK,
-    payload: cupcakes,
-})
+	type: FETCH_CUPCAKES_OK,
+	payload: cupcakes,
+});
 
 export const actionFetchCupcakesError = () => ({
-    type: FETCH_CUPCAKES_ERROR,
-})
+	type: FETCH_CUPCAKES_ERROR,
+});
 
 export function fetchCupcakes() {
-    return async (dispatch) => {
+	return async (dispatch) => {
+		dispatch(actionFetchCupcakes());
 
-        dispatch(actionFetchCupcakes());
-
-        try {
-            const response = await fetch('http://localhost:4000/cupcakes');
-            const data = await response.json();
-            dispatch(actionFetchCupcakesOk(data));
-        } catch (error) {
-            dispatch(actionFetchCupcakesError);
-        }
-    }
+		try {
+			const response = await fetch('http://localhost:4000/cupcakes');
+			const data = await response.json();
+			dispatch(actionFetchCupcakesOk(data));
+		} catch (error) {
+			dispatch(actionFetchCupcakesError);
+		}
+	};
 }
 
 // export const getProducts = (cookies) => dispatch => {
