@@ -1,5 +1,8 @@
 import './Products.scss';
+import Newsletter from '../../components/Newsletter/Newsletter';
 
 export default function Home() {
-    return <h1>Products</h1>
+    return (
+        <Newsletter />
+    )
 }

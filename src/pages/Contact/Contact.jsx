@@ -14,7 +14,7 @@ const ContactUs = () => {
             </div>
             </div>
 
-            <div className="col-2-aboutus"> 
+            <div className="col-2-contact"> 
             <div className="col">
                 <figure><img className="image-bakery" src={contact} alt="bakery"></img></figure>
             </div>
