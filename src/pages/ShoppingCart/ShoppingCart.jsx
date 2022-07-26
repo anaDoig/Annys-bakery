@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 import { IconTrash } from "../../components/Icon/IconTrash";
 
 const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
-const useCounter = () => {
-  const [count, setCount] = useState();
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
-};
+// const useCounter = () => {
+//   const [count, setCount] = useState();
+//   const increment = () => setCount(count + 1);
+//   const decrement = () => setCount(count - 1);
+// };
 
 const ShoppingCart = () => {
   const navigate = useNavigate();
@@ -38,13 +38,15 @@ const ShoppingCart = () => {
       <div className='main-container padding-top'>
         <div className='col-2'>
           <div className='col'>
-            {items.map(({ name, id, price, img, size, quantity }) => (
+            {items.map(({ name, id, price, img, size, quantity, unity }) => (
               <div key={id}>
                 <div className='items_container'>
                   <img className='image' src={img} alt='' />
                   <div className='container-option'>
                     <h4 className='title'>{name}</h4>
-                    <p className='size'>Tamaño: {size}</p>
+                    <p className='size'>
+                      Tamaño: {size} {unity}
+                    </p>
                   </div>
                   {/* <div>
                     <button onClick={() => btonIncrement.increment()}>+</button>
