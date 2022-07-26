@@ -1,5 +1,9 @@
 @import "../../assets/scss/styles.scss";
 
+.padding-top{
+  padding-top: 100px;
+}
+
 .col-2 {
   .col:first-child {
     flex-basis: calc(70% - $gutter);
@@ -15,7 +19,7 @@
   text-align: right;
 }
 
-.container {
+.items_container {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
