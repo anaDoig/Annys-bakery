@@ -50,7 +50,7 @@ const ShoppingCart = () => {
                   </select>
                   <p className='price'>{price}€</p>
                   <div onClick={() => handleRemove(id)}>
-                    <IconTrash width={25} heigth={25} fill='red' />
+                    <IconTrash width={15} heigth={15} fill='red' />
                   </div>
                 </div>
               </div>

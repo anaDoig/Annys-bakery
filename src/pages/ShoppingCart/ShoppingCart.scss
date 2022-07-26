@@ -1,19 +1,13 @@
 @import "../../assets/scss/styles.scss";
 
-
 .col-2 {
-  .col {
-  }
-
   .col:first-child {
     flex-basis: calc(70% - $gutter);
-    border: 1px solid;
     display: grid;
     gap: $gutter;
   }
   .col:last-child {
     flex-basis: 30%;
-    border: 1px solid;
   }
 }
 
@@ -22,19 +16,25 @@
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
   width: 100%;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  select{
+    border-radius: $gutter
+  }
 }
 .image {
-  width: 160px;
+  width: 150px;
   aspect-ratio: 1.5/1;
+  border-radius: 10px;
 }
-// .container-option{
-//   display: flex;
-//   gap: 12px;
-// }
+.container-option {
+  h4 {
+    margin-bottom: 0;
+  }
+}
 .remove {
   width: 15px;
 }
