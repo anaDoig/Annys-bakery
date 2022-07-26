@@ -44,7 +44,7 @@ const updateItemCart = (id, amount) => (dispatch) => {
   dispatch({ type: actionsTypes.UPDATE, payload: id });
 
   return fetch(`http://localhost:4000/shoppingCart/${id}`, {
-    body: JSON.stringify({ quantity: amount }),
+    body: JSON.stringify({ quantity: Number(amount) }),
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
   }).then(() => {

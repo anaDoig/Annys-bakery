@@ -13,11 +13,10 @@ import Cupcakes from './pages/Cupcakes/Cupcakes';
 import Cakes from './pages/Cakes/Cakes';
 
 function App() {
-
   return (
     <>
-      <NavBar />
-
+      <NavBar/>
+          
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
@@ -30,7 +29,7 @@ function App() {
         <Route path="/cupcakes" element={<Cupcakes />} /> 
       </Routes>
     </>
-  )
+  );
 }
 
 export default App;

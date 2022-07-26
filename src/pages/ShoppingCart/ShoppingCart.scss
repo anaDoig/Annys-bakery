@@ -1,1 +1,46 @@
-@import '../../assets/scss/styles.scss';
+@import "../../assets/scss/styles.scss";
+
+.padding-top{
+  padding-top: 100px;
+}
+
+.col-2 {
+  .col:first-child {
+    flex-basis: calc(70% - $gutter);
+    display: grid;
+    gap: $gutter;
+  }
+  .col:last-child {
+    flex-basis: 30%;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.items_container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  select{
+    border-radius: $gutter
+  }
+}
+.image {
+  width: 150px;
+  aspect-ratio: 1.5/1;
+  border-radius: 10px;
+}
+.container-option {
+  h4 {
+    margin-bottom: 0;
+  }
+}
+.remove {
+  width: 15px;
+}
+// .title
+// .size
