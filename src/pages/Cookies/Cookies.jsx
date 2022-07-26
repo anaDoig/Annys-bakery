@@ -9,6 +9,7 @@ import Modal from "../../components/Modal/Modal";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Cookies = () => {
+    
   const dispatch = useDispatch();
   const { cookies, loading, errors } = useSelector(getCookies);
   const [modalState, setModalState] = useState({

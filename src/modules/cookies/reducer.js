@@ -11,7 +11,6 @@ export default function cookiesReducer(state = INITIAL_STATE, action) {
         case actions.FETCH_COOKIES:
             return { ...state, loading: true };
         case actions.FETCH_COOKIES_OK:
-            console.log(state);
             return { ...state, cookies: action.payload };
             
         case actions.FETCH_COOKIES_ERROR:

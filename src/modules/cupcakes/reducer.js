@@ -11,7 +11,6 @@ export default function cupcakesReducer(state = INITIAL_STATE, action) {
         case actions.FETCH_CUPCAKES:
             return { ...state, loading: true };
         case actions.FETCH_CUPCAKES_OK:
-            console.log(state);
             return { ...state, cupcakes: action.payload };
             
         case actions.FETCH_CUPCAKES_ERROR:

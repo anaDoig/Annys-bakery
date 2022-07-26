@@ -1,24 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Cakes.scss';
 import { fetchCakes } from "../../modules/cakes/actions";
 import { getCakes } from "../../modules/cakes/selector";
+import Modal from "../../components/Modal/Modal";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Cakes = () => {
 
     const dispatch = useDispatch();
     const { cakes, loading, errors } = useSelector(getCakes);
-
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        selected: null,
+      });
 
     useEffect(() => {
         dispatch(fetchCakes());
     }, []);
 
-    console.log(cakes);
+    const handleSelect = (product) => {
+        setModalState((prev) => ({ ...prev, selected: product, isOpen: true }));
+    };
 
     return (
+        <>
+        {modalState.isOpen && (
+            <Modal setIsOpen={setModalState} selected={modalState.selected} />
+        )}
         <section className="cookies">
             <div className="bg-mauve">
                 <div className="main-container">
@@ -48,18 +59,17 @@ const Cakes = () => {
             
             <div className="main-container">
                 <div className="col-4">
-                    {cakes.map(({ name, id, img, price }) => (
-                        <div className="product-card" key={id}>
-                            <figure className="product-card__img">
-                                <img  src={img} />
-                            </figure>
-                            <h4>{name}</h4>
-                            <p className="product-card__price">Desde {price}€</p>
-                        </div>
+                    {cakes.map((cake) => (
+                        <ProductCard
+                            key={cake.id}
+                            product={cake}
+                            onSelect={handleSelect}
+                    />
                     ))}
                 </div>
             </div>
         </section>
+    </>
     )
 }
 
