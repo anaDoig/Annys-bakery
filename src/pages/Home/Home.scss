@@ -4,6 +4,7 @@
   width: 100%;
   text-align: center;
   overflow: hidden;
+  height: 600px;
 }
 
 .slides {
@@ -27,10 +28,9 @@
 
 .slides > div > img {
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 .slider-container {
   display: inline-block;
 }
-
