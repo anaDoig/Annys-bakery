@@ -12,8 +12,6 @@ const Products = () => {
     useEffect(() => {
         dispatch(fetchCookies());
     }, []);
-
-    console.log(cookies);
       
     return (
         <section>

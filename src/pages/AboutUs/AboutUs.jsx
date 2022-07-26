@@ -10,7 +10,7 @@ const About = () => {
     <section className="">
 
       <div className="bg-green">
-        <div className="section-header">
+        <div className="title-container">
           <h2>Sobre Nosotras</h2>
         </div>
       </div>
