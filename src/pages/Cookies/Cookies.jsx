@@ -40,7 +40,12 @@ const Cookies = () => {
 
       <section className="cookies">
         <div className="bg-green">
-          <ProductsHero title={title} text={text} link={link} firstLinkText={firstLinkText} currentText={currentText} />
+          <ProductsHero 
+            title={title} 
+            text={text} 
+            link={link} 
+            firstLinkText={firstLinkText}
+            currentText={currentText} />
         </div>
         <div className="main-container">
           <div className="col-4">
