@@ -12,9 +12,9 @@ export default function Navbar() {
             <nav className="navbar">
                 <div className="left-menu">
                     <ul>
-                        <li><CustomLink to="/products">PRODUCTS</CustomLink></li>
-                        <li><CustomLink to="/aboutus">ABOUT US</CustomLink></li>
-                        <li><CustomLink to="/contact">CONTACT</CustomLink></li>
+                        <li><CustomLink to="/products">PRODUCTOS</CustomLink></li>
+                        <li><CustomLink to="/aboutus">SOBRE NOSOTROS</CustomLink></li>
+                        <li><CustomLink to="/contact">CONTACT0</CustomLink></li>
                     </ul>
                 </div>
                 

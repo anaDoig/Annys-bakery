@@ -8,6 +8,7 @@ import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import ProductsComponent from "./components/ProductsComponent/ProductsComponent";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 import Cookies from "./pages/Cookies/Cookies";
 import Cupcakes from "./pages/Cupcakes/Cupcakes";
 import Cakes from "./pages/Cakes/Cakes";
@@ -28,6 +29,8 @@ function App() {
         <Route path='/cakes' element={<Cakes />} />
         <Route path='/cupcakes' element={<Cupcakes />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
