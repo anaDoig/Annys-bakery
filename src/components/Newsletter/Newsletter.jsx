@@ -4,18 +4,16 @@ import {FormNewsletter} from '../Newsletter/FormNewsletter'
 
 const Newsletter = () => {
     return (
-        <section className="main-container-fullwidth">
-    
-            <div className="bg-multicolor">
-            <h3>Únete a Nuestra Newsletter</h3>
-            <p>Recibe nuestras últimas actualizaciones de productos, descuentos exclusivos y más sorpresas en tu bandeja de entrada.</p>
+        <section className="bg-multicolor">
+            <div className="center">
+                <h3>Únete a Nuestra Newsletter</h3>
+                <p>Recibe nuestras últimas actualizaciones de productos, descuentos exclusivos y más sorpresas en tu bandeja de entrada.</p>
 
-            <FormNewsletter />
-            
+                <FormNewsletter />
             </div>
             
         </section>
-        );
-    };
+    );
+};
 
 export default Newsletter;

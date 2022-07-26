@@ -32,20 +32,16 @@ export const FormNewsletter = () => {
     },5000)
 
     return (
-
-        <div className='inputWithButton'>
-
         <form className='form-newsletter' ref={form} onSubmit={sendEmail}>
+            <div className='input-container'>
+                <input className='form-newsletter__input' required type="email" id="fname" name="user_email" placeholder='ESCRIBE TU EMAIL'></input>
 
-            <input className='input' required type="email" id="fname" name="user_email" placeholder='ESCRIBE TU EMAIL'></input>
-
-            <button className='button' type="submit" value="Send" >ENVIAR</button>
+                <button className='form-newsletter__button' type="submit" value="Send" >ENVIAR</button>
+            </div>
 
             {
             result ? <Result/> : null
             }
-        
         </form>
-        </div>
     );
 };
