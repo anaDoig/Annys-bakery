@@ -4,7 +4,7 @@ import './Form.scss';
 
 const Result =() => {
     return(
-        <p>Your message has been sent!</p>
+        <p>Tu Mensaje ha sido Enviado</p>
     )
 }
 
@@ -36,16 +36,16 @@ export const Form = () => {
         <form ref={form} onSubmit={sendEmail}>
             
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="user_name"></input>
+            <input required type="text" id="fname" name="user_name"></input>
 
             <label for="fname">Email</label>
-            <input type="email" id="fname" name="user_email"></input>
+            <input required type="email" id="fname" name="user_email"></input>
 
             <label for="fname">Mensaje</label>
-            <textarea type="text" id="fname" name="message"></textarea>
+            <textarea required type="text" id="fname" name="message"></textarea>
 
 
-            <button className='button' type="submit" value="Send" >Send!</button>
+            <button className='button' type="submit" value="Send" >ENVIAR</button>
 
             {
             result ? <Result/> : null

@@ -1,7 +1,8 @@
 import './Contact.scss';
 import '../../assets/scss/styles.scss';
-import {Form} from '../../components/Form'
+import {Form} from '../../components/Form/Form'
 import contact from '../../assets/img/contact.jpeg'
+import Newsletter from '../../components/Newsletter/Newsletter';
 
 const ContactUs = () => {
     return (
@@ -23,7 +24,7 @@ const ContactUs = () => {
             </div>
             </div>
     
-            
+            <Newsletter />
         </section>
         );
     };
