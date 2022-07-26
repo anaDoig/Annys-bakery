@@ -1,0 +1,27 @@
+@import "../../assets/scss/styles.scss";
+
+
+
+
+.inputWithButton {
+    position: relative;
+    height: 100px;
+    width : 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inputWithButton .input{
+    width: 500px;
+    height: 50px;
+    padding-right: 160px;
+}
+
+.inputWithButton .button {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    padding: 12px;
+    right: 5px;
+}

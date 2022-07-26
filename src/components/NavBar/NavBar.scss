@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-around;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    background-color: white;
 
     ul{
         display: flex;
