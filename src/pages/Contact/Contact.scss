@@ -4,6 +4,12 @@
     @include display-flex(0, space-between);
     max-height: 700px;
 
+    figure {
+        @media screen and (max-width: $mobile-breakpoint)  {
+            height: 400px;
+        }
+    }
+
     .col {
         flex-basis: 50%;
 
@@ -13,6 +19,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media screen and (max-width: $mobile-breakpoint)  {
+                padding: 60px 20px;
+            }   
         }
 
         @media screen and (max-width: $mobile-breakpoint)  {
@@ -21,6 +30,6 @@
     }
 
     @media screen and (max-width: $mobile-breakpoint)  {
-        max-height: 300px;
+        max-height: 100%;
     }
 }

@@ -9,7 +9,7 @@ const ContactUs = () => {
         <section className="main-container-fullwidth">
     
             <div className="bg-mauve">
-            <div className="section-header">
+            <div className="title-container">
                 <h2>Contacto</h2>
             </div>
             </div>
@@ -19,7 +19,7 @@ const ContactUs = () => {
                 <figure><img className="image-bakery" src={contact} alt="bakery"></img></figure>
             </div>
             <div className="col fullwidht">
-                <h3>Dejanos tu Mensaje</h3>
+                <h3>Déjanos tu Mensaje</h3>
                 <Form />
             </div>
             </div>
