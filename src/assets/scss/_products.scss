@@ -35,6 +35,9 @@
 .product-card {
     display: block;
     text-align: left;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
 
     @media screen and (max-width: $mobile-breakpoint)  {
         width: 100%;
@@ -51,9 +54,10 @@
     &__img {
         margin-bottom: 15px;
         transition: all ease 0.5s;
+        height: 305px;
 
         img {
-            height: 305px;
+            height: 100%;
             border-radius: 10px;
             object-position: 50% 50%;
         }
@@ -64,8 +68,15 @@
         font-size: 14px;
         line-height: 18px;
     }
+
+    &__price {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+    }
 }
 
 .products-hero {
     max-height: 300px;
+    margin-bottom: 60px;
 }

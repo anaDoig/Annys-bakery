@@ -163,3 +163,13 @@ figure {
         flex-basis: calc( 33.3% - 20px);
     }
 }
+
+.col-4 {
+    @include display-flex(30px, space-evenly);
+    flex-wrap: wrap;
+
+    div {
+        flex-basis: calc( 25% - 30px);
+    }
+}
+
