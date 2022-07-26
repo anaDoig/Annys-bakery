@@ -2,29 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../../modules/products/actions';
-import { getCookies } from '../../modules/products/selectors';
 
 const Products = () => {
     const dispatch = useDispatch();
-    const { cookies, loading, errors } = useSelector(getCookies);
-
-
-    useEffect(() => {
-        dispatch(getProducts());
-    }, []);
-
-    console.log(cookies);
       
     return (
         <section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex diam, placerat eget lorem eu, volutpat interdum augue. Suspendisse eget massa at ante imperdiet aliquet rhoncus eu felis. Morbi sit amet elementum nulla. Ut maximus nisi lacus, sed tincidunt mauris consectetur porta. Vivamus sit amet ante eu odio iaculis mollis nec non erat. Morbi varius dapibus nisl, convallis porta arcu ornare ac. Maecenas auctor egestas nunc. </p>
-            <div>
-                {cookies.map(( {name }) => (
-                    <p>{name}</p>
-                ))}
-            </div>
-
             <div className='title-container center bg-green'>
                 <h1>Nuestros Productos</h1>
             </div>

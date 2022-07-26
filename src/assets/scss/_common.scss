@@ -144,3 +144,12 @@ figure {
     }
 }
 
+.col-4 {
+    @include display-flex(30px, space-evenly);
+    flex-wrap: wrap;
+
+    div {
+        flex-basis: calc( 25% - 30px);
+    }
+}
+
