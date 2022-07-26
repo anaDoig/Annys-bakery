@@ -2,9 +2,9 @@ import './Home.scss';
 import Hero from '../Hero/Hero.jsx';
 
 const Home = () => {
-    return (
-      <Hero/>
-    )
-  }
+  return (
+    <Hero/>
+  )
+}
 
 export default Home;
