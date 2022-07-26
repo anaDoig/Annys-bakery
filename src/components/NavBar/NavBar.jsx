@@ -1,6 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import './NavBar.scss';
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo2.png'
 import user from '../../assets/img/user.png'
 import cart from '../../assets/img/shopping-cart.png'
 
