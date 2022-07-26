@@ -25,6 +25,7 @@ const ShoppingCart = () => {
   const handleUpdate = (id, quantity) => {
     dispatch(updateItemCart(id, quantity));
   };
+
   useEffect(() => {
     dispatch(getListCart());
   }, []);

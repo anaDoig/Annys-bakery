@@ -1,6 +1,6 @@
 @import "../../assets/scss/styles.scss";
 
-.padding-top{
+.padding-top {
   padding-top: 100px;
 }
 
@@ -25,22 +25,23 @@
   grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
-  select{
-    border-radius: $gutter
+  select {
+    border-radius: $gutter;
   }
 }
+
 .image {
   width: 150px;
   aspect-ratio: 1.5/1;
   border-radius: 10px;
 }
+
 .container-option {
   h4 {
     margin-bottom: 0;
   }
 }
+
 .remove {
   width: 15px;
 }
-// .title
-// .size
