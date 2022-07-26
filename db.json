@@ -426,21 +426,5 @@
     }
   ],
   "shoppingCart": [
-    {
-      "name": "Board cupcakes",
-      "id": 9,
-      "price": 16,
-      "img": "https://i.imgur.com/QSsEolH.jpg",
-      "size": "6 und",
-      "quantity": 3
-    },
-    {
-      "name": "Minnie cupcakes",
-      "id": 10,
-      "price": 16,
-      "img": "https://i.imgur.com/WlYw4b1.jpg",
-      "size": "4/5 raciones",
-      "quantity": 6
-    }
   ]
 }
