@@ -31,7 +31,7 @@
         margin: 0;
     }
 
-    &__price-container {
+    &__select-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -42,14 +42,14 @@
         font-size: 30px;
         border-bottom: 3px dotted $black;
         padding-bottom: 20px;
+        margin-bottom: 55px;
     }
 
     &__units {
         display: block;
-        width: 100%;
+        width: 50%;
         height: 45px;
         padding: 0 20px;
-        margin-bottom: 30px;
         font-size: 20px;
         line-height: 20px;
     }
@@ -82,7 +82,7 @@
         background-color: $green;
         border: 1px solid $green;
         padding: 15px 0;
-        width: 40%;
+        width: 30%;
         border-radius: 10px;
     }
 

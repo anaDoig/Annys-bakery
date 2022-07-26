@@ -37,14 +37,15 @@ const Modal = ({ setIsOpen, selected }) => {
             <p className="modal__price">
               {value ? selected.price[value] : "-"}€
             </p>
-            <select id="size" className="modal__units" onChange={handleSelect}>
-              {Object.entries(selected.size).map(([key, value]) => (
-                <option value={key}>
-                  {value} {selected.unit}
-                </option>
-              ))}
-            </select>
-            <div className="modal__price-container">
+            
+            <div className="modal__select-container">
+              <select id="size" className="modal__units" onChange={handleSelect}>
+                {Object.entries(selected.size).map(([key, value]) => (
+                  <option value={key}>
+                    {value} {selected.unit}
+                  </option>
+                ))}
+              </select>
               {/* <div className="modal__qty">
                 <button className="modal__qty-button">-</button>
                 <span className="modal__selected-qty">1</span>
