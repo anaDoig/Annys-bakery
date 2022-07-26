@@ -1,3 +1,7 @@
+const getLowestPrice = (obj) => {
+  return Math.min(...Object.values(obj));
+};
+
 const ProductCard = ({ product, onSelect }) => {
   return (
     <div className="product-card" onClick={() => onSelect(product)}>
@@ -5,7 +9,9 @@ const ProductCard = ({ product, onSelect }) => {
         <img src={product.img} />
       </figure>
       <h4>{product.name}</h4>
-      <p className="product-card__price">Desde {product.price}€</p>
+      <p className="product-card__price">
+        Desde {getLowestPrice(product.price)}€
+      </p>
     </div>
   );
 };
