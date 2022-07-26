@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 import { IconTrash } from "../../components/Icon/IconTrash";
 
 const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
-const useCounter = () => {
-  const [count, setCount] = useState();
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
-};
+// const useCounter = () => {
+//   const [count, setCount] = useState();
+//   const increment = () => setCount(count + 1);
+//   const decrement = () => setCount(count - 1);
+// };
 
 const ShoppingCart = () => {
   const navigate = useNavigate();

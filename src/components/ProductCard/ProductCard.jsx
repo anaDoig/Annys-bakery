@@ -1,6 +1,4 @@
-const getLowestPrice = (obj) => {
-  return Math.min(...Object.values(obj));
-};
+import { getLowestPrice } from "../../utils";
 
 const ProductCard = ({ product, onSelect }) => {
   return (

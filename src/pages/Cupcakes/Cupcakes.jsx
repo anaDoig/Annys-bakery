@@ -1,24 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Cupcakes.scss';
 import { fetchCupcakes } from "../../modules/cupcakes/actions";
 import { getCupcakes } from "../../modules/cupcakes/selectors";
-
+import Modal from "../../components/Modal/Modal";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Cupcakes = () => {
 
     const dispatch = useDispatch();
     const { cupcakes, loading, errors } = useSelector(getCupcakes);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        selected: null,
+    });
 
     useEffect(() => {
         dispatch(fetchCupcakes());
     }, []);
 
-    console.log(cupcakes);
+    const handleSelect = (product) => {
+        setModalState((prev) => ({ ...prev, selected: product, isOpen: true }));
+      };
 
     return (
+        <>
+        {modalState.isOpen && (
+            <Modal setIsOpen={setModalState} selected={modalState.selected} />
+        )}
+
         <section className="cupcakes">
             <div className="bg-mauve">
                 <div className="main-container">
@@ -48,18 +60,17 @@ const Cupcakes = () => {
             
             <div className="main-container">
                 <div className="col-4">
-                    {cupcakes.map(({ name, id, img, price }) => (
-                        <div className="product-card" key={id}>
-                            <figure className="product-card__img">
-                                <img  src={img} />
-                            </figure>
-                            <h4>{name}</h4>
-                            <p className="product-card__price">Desde {price}€</p>
-                        </div>
+                    {cupcakes.map((cupcakes) => (
+                        <ProductCard
+                            key={cupcakes.id}
+                            product={cupcakes}
+                            onSelect={handleSelect}
+                        />
                     ))}
                 </div>
             </div>
         </section>
+        </>
     )
 }
 
