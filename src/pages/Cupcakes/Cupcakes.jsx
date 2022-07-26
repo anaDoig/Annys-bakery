@@ -58,7 +58,6 @@ const Cupcakes = () => {
                         </div>
                     ))}
                 </div>
-                
             </div>
         </section>
     )
