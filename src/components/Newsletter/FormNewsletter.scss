@@ -1,27 +1,42 @@
 @import "../../assets/scss/styles.scss";
 
+.form-newsletter {
+    &__input {
+        border: 0;
+        width: 70%;
+        margin: 0;
+        padding-left: 10px;
+        height: auto;
+        border-radius: 0;
+    }
 
+    &__button {
+        width: 30%;
+        border: 0;
+        background-color: #e7cbef;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all ease 0.4s;
 
-
-.inputWithButton {
-    position: relative;
-    height: 100px;
-    width : 500px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+        &:hover {
+            background-color: #201124;
+            color: #e7cbef;
+        }
+    }
 }
 
-.inputWithButton .input{
-    width: 500px;
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     height: 50px;
-    padding-right: 160px;
-}
-
-.inputWithButton .button {
-    position: absolute;
-    right: 0;
-    top: 15px;
-    padding: 12px;
-    right: 5px;
+    align-content: stretch;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
 }

@@ -17,4 +17,10 @@
         flex-direction: column;
         padding: 0 20px;
     }
+
+    .col {
+        @media screen and (max-width: $mobile-breakpoint)  {
+            flex-basis: 100%;
+        }
+    }
 }
