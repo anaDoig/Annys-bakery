@@ -11,7 +11,6 @@ export default function cakesReducer(state = INITIAL_STATE, action) {
         case actions.FETCH_CAKES:
             return { ...state, loading: true };
         case actions.FETCH_CAKES_OK:
-            console.log(state);
             return { ...state, cakes: action.payload };
             
         case actions.FETCH_CAKES_ERROR:

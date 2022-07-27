@@ -23,10 +23,8 @@ export function fetchCakes() {
         try {
             const response = await fetch('http://localhost:4000/cakes');
             const data = await response.json();
-            console.log(data);
             dispatch(actionFetchCakesOk(data));
         } catch (error) {
-            console.log(error);
             dispatch(actionFetchCakesError);
         }
     }

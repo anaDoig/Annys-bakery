@@ -21,6 +21,10 @@
   right: 50%;
   transform: translate(-50%, -50%);
 
+  @media screen and (max-width: $mobile-breakpoint) {
+    max-width: 90%;
+  }
+
   button {
     cursor: pointer;
   }
@@ -31,10 +35,14 @@
     margin: 0;
   }
 
-  &__price-container {
+  &__select-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
   }
 
   &__price {
@@ -42,16 +50,22 @@
     font-size: 30px;
     border-bottom: 3px dotted $black;
     padding-bottom: 20px;
+    margin-bottom: 55px;
   }
 
   &__units {
     display: block;
-    width: 100%;
+    width: 50%;
     height: 45px;
     padding: 0 20px;
-    margin-bottom: 30px;
     font-size: 20px;
     line-height: 20px;
+    border: 1px solid $black;
+    outline: none;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__qty-button {
@@ -76,7 +90,7 @@
     vertical-align: middle;
   }
 
-  &__add-to-cart {
+  <<<<<<< HEAD &__add-to-cart {
     font-size: 20px;
     line-height: 20px;
     background-color: $green;
@@ -85,8 +99,19 @@
     width: 40%;
     border-radius: 10px;
   }
-
-  &__close-modal {
+  ======= &__add-to-cart {
+    font-size: 20px;
+    line-height: 20px;
+    background-color: $green;
+    border: 1px solid $green;
+    padding: 15px 0;
+    width: 30%;
+    border-radius: 10px;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+    }
+  }
+  >>>>>>>master &__close-modal {
     position: absolute;
     cursor: pointer;
     display: block;

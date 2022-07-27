@@ -2,9 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { getCookies } from '../../modules/cookies/selectors';
+import { fetchCookies } from '../../modules/cookies/actions';
 
 const Products = () => {
     const dispatch = useDispatch();
+    const { cookies } = useSelector(getCookies);
+
+    useEffect(() => {
+        dispatch(fetchCookies());
+    }, []);
       
     return (
         <section>
@@ -18,33 +25,30 @@ const Products = () => {
                     <Link to='/cookies' title='Cookies' className='products__link'>Ver más</Link>
                     <div className='column-container'>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="/cookies" title='Product name'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/DYHgYm3.jpg"' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/CUg1ekI.jpg' alt="Cookies de Nutella" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='product-card__price'>Desde <span>product.price</span></p>
+                                <h4>Nutella cookies</h4>
+                                <p className='product-card__price'>Desde <span>12€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="/cookies" title='Almond cookies'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/e5x99uq.jpg' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/DYHgYm3.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='product-card__price'>Desde <span>product.price</span></p>
+                                <h4>Almond cookies</h4>
+                                <p className='product-card__price'>Desde <span>12€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="/cookies" title='Polvorones cookies'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/4NLoDj0.jpg' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/4NLoDj0.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='products__price'>Desde <span>product.price</span></p>
+                                <h4>Polvorones cookies</h4>
+                                <p className='products__price'>Desde <span>12€</span></p>
                             </a>
                         </div>
                     </div>
@@ -54,36 +58,33 @@ const Products = () => {
             <div className='products bg-mauve'>
                 <div className='main-container center'>
                     <h2>Tartas</h2>
-                    <Link to='/Cakes' title='Cookies' className='products__link'>Ver más</Link>
+                    <Link to='/Cakes' title='Tartas' className='products__link'>Ver más</Link>
                     <div className='column-container'>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="/cakes" title='Chocolate Cake'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/DYHgYm3.jpg"' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/8cNLZ4K.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='product-card__price'>Desde <span>product.price</span></p>
+                                <h4>Chocolate Cake</h4>
+                                <p className='product-card__price'>Desde <span>40€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="/cakes" title='Product name'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/e5x99uq.jpg' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/s3LtuGD.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='product-card__price'>Desde <span>product.price</span></p>
+                                <h4>Letter Cake</h4>
+                                <p className='product-card__price'>Desde <span>45€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='product-card' href="" title='Product name'>
+                            <a className='product-card' href="" title='Meme Cake'>
                                 <figure className='product-card__img'>
-                                    <img src='https://i.imgur.com/4NLoDj0.jpg' alt="Tarta"></img>
+                                    <img src='https://i.imgur.com/AxiXyAR.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='product-card__description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='product-card__price'>Desde <span>product.price</span></p>
+                                <h4>Meme Cake</h4>
+                                <p className='product-card__price'>Desde <span>40€</span></p>
                             </a>
                         </div>
                     </div>
@@ -93,36 +94,33 @@ const Products = () => {
             <div className='products'>
                 <div className='main-container center'>
                     <h2>Cupcakes</h2>
-                    <Link to='/Cupcakes' title='Cupcakes' className='products__link'>Ver más</Link>
+                    <Link to='/cupcakes' title='Cookies' className='products__link'>Ver más</Link>
                     <div className='column-container'>
                         <div className='col'>
-                            <a className='products__card' href="" title='Product name'>
-                                <figure className='products__card-img'>
-                                    <img src='https://i.imgur.com/DYHgYm3.jpg"' alt="Tarta"></img>
+                            <a className='product-card' href="" title='Carrot Cupcakes'>
+                                <figure className='product-card__img'>
+                                    <img src='https://i.imgur.com/2OR9ill.jpg' alt="Carrot Cupcakes" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='products__card-description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='products__card-price'>Desde <span>product.price</span></p>
+                                <h4>Carrot Cupcakes</h4>
+                                <p className='product-card__price'>Desde <span>14€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='products__card' href="" title='Product name'>
-                                <figure className='products__card-img'>
-                                    <img src='https://i.imgur.com/e5x99uq.jpg' alt="Tarta"></img>
+                            <a className='product-card' href="/cupcakes" title='Chips&Cookies Cupcakes'>
+                                <figure className='product-card__img'>
+                                    <img src='https://i.imgur.com/oMH2Whr.jpg' alt="Tarta" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='products__card-description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='products__card-price'>Desde <span>product.price</span></p>
+                                <h4>Chips&Cookies Cupcakes</h4>
+                                <p className='product-card__price'>Desde <span>14€</span></p>
                             </a>
                         </div>
                         <div className='col'>
-                            <a className='products__card' href="" title='Product name'>
-                                <figure className='products__card-img'>
-                                    <img src='https://i.imgur.com/4NLoDj0.jpg' alt="Tarta"></img>
+                            <a className='product-card' href="/cupcakes" title='Product name'>
+                                <figure className='product-card__img'>
+                                    <img src='https://i.imgur.com/3DjmD3N.jpg' alt="Chocolate Cupcakes" />
                                 </figure>
-                                <h4>Tarta de chocolate</h4>
-                                <p className='products__card-description'>Our first-ever breakfast sampler includes three delicious loaves: Lemon, blab a bla bla bla</p>
-                                <p className='products__card-price'>Desde <span>product.price</span></p>
+                                <h4>Chocolate Cupcakes</h4>
+                                <p className='products__price'>Desde <span>14€</span></p>
                             </a>
                         </div>
                     </div>
