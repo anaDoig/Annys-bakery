@@ -6,9 +6,11 @@ import bakery3 from '../../assets/img/bakery3.jpeg'
 import bakery4 from '../../assets/img/bakery4.jpeg';
 import Newsletter from "../../components/Newsletter/Newsletter";
 
+import Newsletter from '../../components/Newsletter/Newsletter';
+
 const About = () => {
   return (
-    <section className="">
+    <section>
 
       <div className="bg-green">
         <div className="title-container">
@@ -20,7 +22,7 @@ const About = () => {
         
         <div className="col-2-aboutus"> 
           <div className="col">
-            <figure><img className="logo" src={bakery} alt="bakery"></img></figure>
+            <figure><img src={bakery} alt="bakery"></img></figure>
           </div>
           <div className="col fullwidht">
             <h3>El Origen </h3>
@@ -47,13 +49,13 @@ const About = () => {
             </p>
           </div>
           <div className="col">
-            <figure><img className="logo" src={bakery2} alt="bakery"></img></figure>
+            <figure><img src={bakery2} alt="bakery"></img></figure>
           </div>
         </div>
 
         <div className="col-2-aboutus"> 
           <div className="col">
-            <figure><img className="logo" src={bakery3} alt="bakery"></img></figure>
+            <figure><img src={bakery3} alt="bakery"></img></figure>
           </div>
           <div className="col fullwidht">
             <h3>Las Mejores Tartas</h3>
@@ -82,9 +84,11 @@ const About = () => {
             </p>
           </div>
           <div className="col">
-            <figure><img className="logo" src={bakery4} alt="bakery"></img></figure>
+            <figure><img src={bakery4} alt="bakery"></img></figure>
           </div>
         </div>
+
+        <Newsletter />
 
       </div>
       <Newsletter />
