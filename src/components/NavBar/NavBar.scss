@@ -8,79 +8,63 @@
   position: fixed;
   width: 100%;
   background-color: white;
+  z-index: 11;
+  top: 0;
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-around;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    z-index: 11;
-    top: 0;
-
-    ul{
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
     }
 
-  a {
-    text-decoration: none;
-    color: black;
-    margin: 20px;
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 20px;
 
-    &:hover {
-      font-family: "robotobold";
+      &:hover {
+        font-family: "robotobold";
+      }
     }
+    .logo {
+      width: 120px;
+      left: 0;
+      right: 0;
+      top: 2px;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 100px;
+      }
+    }
+
+    .right-menu {
+      img {
+        width: 30px;
+      }
   }
 
-<<<<<<< HEAD
-  .logo {
-    width: 120px;
-    left: 0;
-    right: 0;
-    top: 2px;
-    margin-left: auto;
-    margin-right: auto;
+  .cart-counter {
+    display: block;
     position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    right: -10px;
+    color: $white;
+    background: red;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
   }
-=======
-    .logo{
-        width: 120px;
-        left:0;
-        right:0;
-        top: 2px;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        @media screen and (max-width: $mobile-breakpoint)  {
-            width: 100px;
-        }
-    }
->>>>>>> master
 
-  .right-menu {
-    img {
-      width: 30px;
-    }
+  .container-link {
+    position: relative;
   }
-}
-
-.cart-counter {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  color: black;
-  background: red;
-  border-radius: 10px;
-}
-
-.container-link {
-  position: relative;
 }
