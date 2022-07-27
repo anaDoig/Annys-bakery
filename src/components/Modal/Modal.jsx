@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { addToCart, updateItemCart } from "../../modules/shoppingCart/actions";
+
+import { addToCart } from "../../modules/shoppingCart";
 import "./Modal.scss";
 
 const Modal = ({ setIsOpen, selected }) => {
@@ -9,7 +10,6 @@ const Modal = ({ setIsOpen, selected }) => {
 
   const handleSubmit = (event) => {
     const { id, ...product } = selected;
-    console.log(selected);
     const selectValue = event.target.size.value;
     event.preventDefault();
 
@@ -24,10 +24,6 @@ const Modal = ({ setIsOpen, selected }) => {
 
   const handleSelect = (event) => {
     setValue(event.target.value);
-  };
-
-  const handleUpdate = (id, quantity) => {
-    dispatch(updateItemCart(id, quantity));
   };
 
   return (

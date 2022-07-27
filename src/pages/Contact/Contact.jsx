@@ -8,12 +8,12 @@ const ContactUs = () => {
   return (
     <section className='main-container-fullwidth'>
       <div className='bg-mauve'>
-        <div className='section-header'>
+        <div className='title-container'>
           <h2>Contacto</h2>
         </div>
       </div>
 
-      <div className='col-2-aboutus'>
+      <div className='col-2-contact'>
         <div className='col'>
           <figure>
             <img className='image-bakery' src={contact} alt='bakery'></img>
@@ -24,7 +24,6 @@ const ContactUs = () => {
           <FormContact />
         </div>
       </div>
-
       <Newsletter />
     </section>
   );

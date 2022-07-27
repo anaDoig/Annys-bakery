@@ -433,5 +433,24 @@
       "id": 1
     }
   ],
-  "shoppingCart": []
+  "shoppingCart": [
+    {
+      "name": "Nutella cookies",
+      "img": "https://i.imgur.com/CUg1ekI.jpg",
+      "price": 12,
+      "size": 6,
+      "unit": "und",
+      "quantity": 3,
+      "id": 1
+    },
+    {
+      "name": "Nutella cookies",
+      "img": "https://i.imgur.com/CUg1ekI.jpg",
+      "price": 22,
+      "size": 12,
+      "unit": "und",
+      "quantity": 1,
+      "id": 2
+    }
+  ]
 }
