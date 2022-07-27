@@ -29,6 +29,19 @@ h4 {
     @include titles(26px, 26px, 20px);
 }
 
+button {
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $mauve;
+    transition: all ease 0.4s;
+
+    &:hover {
+        background-color: $darkpurple;
+        color: $mauve;
+    }
+}
+
 
 a {
     color: $black;

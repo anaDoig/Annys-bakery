@@ -2,6 +2,7 @@ import "./Contact.scss";
 import "../../assets/scss/styles.scss";
 import { FormContact } from "../../components/FormContact/FormContact";
 import contact from "../../assets/img/contact.jpeg";
+import Newsletter from "../../components/Newsletter/Newsletter";
 
 const ContactUs = () => {
   return (
@@ -23,6 +24,7 @@ const ContactUs = () => {
           <FormContact />
         </div>
       </div>
+      <Newsletter />
     </section>
   );
 };
