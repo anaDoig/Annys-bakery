@@ -1,115 +1,114 @@
-@import '../../assets/scss/styles.scss';
+@import "../../assets/scss/styles.scss";
 
 .modal-veil {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(31, 31, 31, 0.5);
-    z-index: 11;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(31, 31, 31, 0.5);
+  z-index: 11;
 }
 
 .modal {
-    background-color: $white;
-    width: 100%;
-    max-width: 60%;
-    padding: 35px;
+  background-color: $white;
+  width: 100%;
+  max-width: 60%;
+  padding: 35px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    max-width: 90%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: $secondary-font-regular;
+    font-size: 35px;
+    margin: 0;
+  }
+
+  &__select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  &__price {
+    font-family: $secondary-font-regular;
+    font-size: 30px;
+    border-bottom: 3px dotted $black;
+    padding-bottom: 20px;
+    margin-bottom: 55px;
+  }
+
+  &__units {
+    display: block;
+    width: 50%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid $black;
+    outline: none;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__qty-button {
+    display: inline-block;
+    background-color: $green;
+    border: 1px solid $green;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: $main-font-light;
+    vertical-align: middle;
+  }
+
+  &__selected-qty {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  &__add-to-cart {
+    font-size: 20px;
+    line-height: 20px;
+    background-color: $green;
+    border: 1px solid $green;
+    padding: 15px 0;
+    width: 30%;
     border-radius: 10px;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100%;
+    }
+  }
+  &__close-modal {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-
-    @media screen and (max-width: $mobile-breakpoint)  {
-        max-width: 90%;
-    }
-
-    button {
-        cursor: pointer;
-    }
-
-    &__title {
-        font-family: $secondary-font-regular;
-        font-size: 35px;
-        margin: 0;
-    }
-
-    &__select-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media screen and (max-width: $mobile-breakpoint)  {
-            flex-direction: column; 
-        }
-    }
-
-    &__price {
-        font-family: $secondary-font-regular;
-        font-size: 30px;
-        border-bottom: 3px dotted $black;
-        padding-bottom: 20px;
-        margin-bottom: 55px;
-    }
-
-    &__units {
-        display: block;
-        width: 50%;
-        height: 45px;
-        padding: 0 20px;
-        font-size: 20px;
-        line-height: 20px;
-        border: 1px solid $black;
-        outline: none;
-        @media screen and (max-width: $mobile-breakpoint)  {
-            width: 100%;
-            margin-bottom: 20px; 
-        }
-    }
-
-    &__qty-button {
-        display: inline-block;
-        background-color: $green;
-        border: 1px solid $green;
-        border-radius: 20px;
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
-        line-height: 20px;
-        font-family: $main-font-light;
-        vertical-align: middle;
-    }
-
-    &__selected-qty {
-        display: inline-block;
-        width: 30px;
-        text-align: center;
-        font-size: 20px;
-        line-height: 20px;
-        vertical-align: middle;
-    }
-
-    &__add-to-cart {
-        font-size: 20px;
-        line-height: 20px;
-        background-color: $green;
-        border: 1px solid $green;
-        padding: 15px 0;
-        width: 30%;
-        border-radius: 10px;
-        @media screen and (max-width: $mobile-breakpoint)  {
-            width: 100%; 
-        }
-    }
-
-    &__close-modal {
-        position: absolute;
-        cursor: pointer;
-        display: block;
-        top: 15px;
-        right: 25px;
-        font-size: 25px;
-        font-family: $main-font-light;
-    }
+    cursor: pointer;
+    display: block;
+    top: 15px;
+    right: 25px;
+    font-size: 25px;
+    font-family: $main-font-light;
+  }
 }

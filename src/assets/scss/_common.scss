@@ -29,6 +29,19 @@ h4 {
     @include titles(26px, 26px, 20px);
 }
 
+button {
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $mauve;
+    transition: all ease 0.4s;
+
+    &:hover {
+        background-color: $darkpurple;
+        color: $mauve;
+    }
+}
+
 
 a {
     color: $black;
@@ -62,7 +75,7 @@ figure {
 
 .title-container{
     text-align: center;
-    padding: 150px 0 70px 0;
+    padding: 135px 0 40px 0;
 
     @media screen and (max-width: $mobile-breakpoint)  {
         padding: 125px 0 30px 0; 
@@ -71,7 +84,7 @@ figure {
     h1 {
         margin-bottom: 0;
         font-family: $secondary-font-regular;
-        font-size: 50px;
+        font-size: 40px;
         line-height: 55px;
 
         @media screen and (max-width: $mobile-breakpoint)  {
