@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCookies } from '../../modules/cookies/selectors';
 import { fetchCookies } from '../../modules/cookies/actions';
+import Newsletter from '../../components/Newsletter/Newsletter';
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -126,13 +127,8 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-
-            
-            
-
+            <Newsletter />
         </section>
-
-
     )
 }
 

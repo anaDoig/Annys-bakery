@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="bg-mauve">
       <>
-        <Newsletter />
         {/* <!-- Contact  --> */}
         <div className="social-media-container">
             <a

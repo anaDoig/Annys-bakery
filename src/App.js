@@ -16,10 +16,11 @@ import Protected from "./components/Protected";
 
 function App() {
   return (
-    <>
+    
+      <div style={{height: "100%", display: "flex", flexDirection: "column"}}>
       <NavBar />
 
-      <div>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -38,10 +39,9 @@ function App() {
           <Route path="/cakes" element={<Cakes />} />
           <Route path="/cupcakes" element={<Cupcakes />} />
         </Routes>
-      </div>
 
       <Footer />
-    </>
+      </div>
   );
 }
 

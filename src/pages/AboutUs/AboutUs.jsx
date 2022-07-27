@@ -3,7 +3,8 @@ import '../../assets/scss/styles.scss';
 import bakery from '../../assets/img/bakery.jpg'
 import bakery2 from '../../assets/img/bakery2.jpeg'
 import bakery3 from '../../assets/img/bakery3.jpeg'
-import bakery4 from '../../assets/img/bakery4.jpeg'
+import bakery4 from '../../assets/img/bakery4.jpeg';
+import Newsletter from "../../components/Newsletter/Newsletter";
 
 const About = () => {
   return (
@@ -86,6 +87,7 @@ const About = () => {
         </div>
 
       </div>
+      <Newsletter />
     </section>
   );
 };
