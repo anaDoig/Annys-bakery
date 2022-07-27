@@ -7,14 +7,20 @@
 }
     
 
-@mixin display-flex($gap, $justify-content) {
+@mixin display-flex($gutter, $justify-content) {
     display: flex;
     justify-content: $justify-content;
     flex-direction: row;
-    gap: $gap;
+    gap: $gutter;
 
     @media screen and (max-width: $mobile-breakpoint)  {
         flex-direction: column;
         padding: 0 20px;
+    }
+
+    .col {
+        @media screen and (max-width: $mobile-breakpoint)  {
+            flex-basis: 100%;
+        }
     }
 }

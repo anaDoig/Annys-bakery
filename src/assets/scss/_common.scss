@@ -11,10 +11,18 @@ h1 {
 
 h2 {
     @include titles(52px, 48px, 15px);
+    @media screen and (max-width: $mobile-breakpoint)  {
+        font-size: 45px;
+    }
 }
 
 h3 {
-    @include titles(40px, 30px, 25px);
+    @include titles(40px, 42px, 25px);
+
+    @media screen and (max-width: $mobile-breakpoint)  {
+        font-size: 35px;
+        line-height: 38px;
+    }
 }
 
 h4 {
@@ -47,12 +55,21 @@ figure {
 
 .title-container{
     text-align: center;
-    padding: 85px 0;
+    padding: 135px 0 40px 0;
+
+    @media screen and (max-width: $mobile-breakpoint)  {
+        padding: 125px 0 30px 0; 
+    }
 
     h1 {
         margin-bottom: 0;
         font-family: $secondary-font-regular;
         font-size: 50px;
+        line-height: 55px;
+
+        @media screen and (max-width: $mobile-breakpoint)  {
+        font-size: 40px;
+    }
     }
 }
 
@@ -61,7 +78,8 @@ figure {
 }
 
 .breadcrumbs {
-    @include display-flex(0, left);
+    display: flex;
+    justify-content: left;
     margin-bottom: 30px;
 
     li {
@@ -114,6 +132,7 @@ figure {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 
     &.center {
         text-align: center;
@@ -156,3 +175,13 @@ figure {
         flex-basis: calc( 33.3% - 20px);
     }
 }
+
+.col-4 {
+    @include display-flex(30px, space-evenly);
+    flex-wrap: wrap;
+
+    div {
+        flex-basis: calc( 25% - 30px);
+    }
+}
+
