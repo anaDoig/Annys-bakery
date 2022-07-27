@@ -73,6 +73,9 @@
   border-radius: 10px;
   transition-duration: 0.4s;
   background-color: $mauve;
+  height: 50px;
+  align-self: flex-end;
+  cursor: pointer;
 
   &:hover {
     background-color: $darkpurple;

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { IconTrash } from "../../components/Icon/IconTrash";
 import { ItemCart } from "../../components/ItemCart/ItemCart";
 import { IconArrowRight } from "../../components/Icon/IconArrowRight";
+import { Link } from "react-router-dom";
 
 const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
 const ivaTotal = (subtotal) => (subtotal * 10) / 110;
@@ -35,15 +36,14 @@ const ShoppingCart = () => {
   return (
     <>
       <div className='bg-mauve'>
-        <div className='section-header'>
+        <div className='title-container'>
           <h2>Carrito</h2>
         </div>
       </div>
       <div className='main-container'>
-        <ul className='breadcrumbs  center'>
+        <ul className='breadcrumbs'>
           <li>
-            {" "}
-            <a onClick={() => navigate("/products")}> Carrito</a>
+            <Link to="/products">Carrito</Link>
           </li>
           <li>Datos de Envio</li>
           <li>Pago</li>

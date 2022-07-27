@@ -43,7 +43,7 @@ export default function Navbar() {
             </li>
             <li>
               <CustomLink to='/shoppingcart'>
-                <div style={{ position: "relative" }}>
+                <div className="container-link">
                   <img src={cart} alt='logo'></img>
                   <span className='cart-counter'>{counter}</span>
                 </div>

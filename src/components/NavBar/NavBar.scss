@@ -26,17 +26,18 @@
     &:hover {
       font-family: "robotobold";
     }
-  }
-  .logo {
-    width: 120px;
-    left: 0;
-    right: 0;
-    top: 2px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    @media screen and (max-width: $mobile-breakpoint) {
-      width: 100px;
+    .logo {
+      width: 120px;
+      left: 0;
+      right: 0;
+      top: 2px;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 100px;
+      }
     }
   }
 
@@ -47,12 +48,18 @@
   }
 
   .cart-counter {
+    display: block;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    color: black;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    right: -10px;
+    color: $white;
     background: red;
     border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
   }
 
   .container-link {
