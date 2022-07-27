@@ -41,7 +41,7 @@ const About = () => {
               cupcakes con fondant. Nuestra primera vez fue todo un éxito, todos querían
               nuestras tartas decoradas. Fue todo un reto conseguir de manera empírica decorar tartas, 
               los cupcakes al ser
-              más pequeños som más fáciles de decorar, pero para una tarta debíamos ser
+              más pequeños son más fáciles de decorar, pero para una tarta debíamos ser
               mucho más cuidadosas. Aunque el sabor parece lo más importante la presentación lo és más.
             </p>
           </div>
@@ -76,7 +76,7 @@ const About = () => {
               Con el paso del tiempo fuimos actualizándonos y aprendiendo nuevas
               técnicas de decoración. A dia de hoy hacemos las mejores tartas decoradas 
               con una crema mucho más suave y agradable.
-              Nuestro objetivo es crear momentos especiales, unicos y deliciosos.
+              Nuestro objetivo es crear momentos especiales, únicos y deliciosos.
               Con mucho amor, os invito a ver todos nuestros productos. 
             </p>
           </div>

@@ -12,23 +12,33 @@ import Footer from "./components/Footer/Footer";
 import Cookies from "./pages/Cookies/Cookies";
 import Cupcakes from "./pages/Cupcakes/Cupcakes";
 import Cakes from "./pages/Cakes/Cakes";
+import Protected from "./components/Protected";
 
 function App() {
   return (
     <>
       <NavBar />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/aboutus' element={<AboutUs />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/login' element={<LogIn />} />
-        <Route path='/shoppingcart' element={<ShoppingCart />} />
-        <Route path='/cookies' element={<Cookies />} />
-        <Route path='/cakes' element={<Cakes />} />
-        <Route path='/cupcakes' element={<Cupcakes />} />
-      </Routes>
+      <div style={{ paddingTop: "50px" }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route
+            path="/shoppingcart"
+            element={
+              <Protected>
+                <ShoppingCart />
+              </Protected>
+            }
+          />
+          <Route path="/cookies" element={<Cookies />} />
+          <Route path="/cakes" element={<Cakes />} />
+          <Route path="/cupcakes" element={<Cupcakes />} />
+        </Routes>
+      </div>
 
       <Footer />
     </>

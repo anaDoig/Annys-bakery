@@ -16,8 +16,7 @@ footer {
   }
 
   .social-media-container img {
-    font-size: 20px;
-    width: 5vw;
+    width: 3vw;
   }
 
   .social-media-container img:hover {
@@ -29,6 +28,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size:small;
   }
   
   .links:hover {
