@@ -1,8 +1,18 @@
-@import '../../assets/scss/styles.scss';
+@import "../../assets/scss/styles.scss";
 
 .navbar {
-    font-family: $main-font-regular; 
+  font-family: $main-font-regular;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  background-color: white;
+
+  ul {
     display: flex;
+    flex-direction: row;
+    list-style-type: none;
     justify-content: space-around;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
     position: fixed;
@@ -20,16 +30,27 @@
         height: 80px;
     }
 
-    a {
-        text-decoration: none;
-        color: black;
-        margin: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+    margin: 20px;
 
-        &:hover{
-            font-family: 'robotobold';
-        }
+    &:hover {
+      font-family: "robotobold";
     }
+  }
 
+<<<<<<< HEAD
+  .logo {
+    width: 120px;
+    left: 0;
+    right: 0;
+    top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+  }
+=======
     .logo{
         width: 120px;
         left:0;
@@ -42,10 +63,24 @@
             width: 100px;
         }
     }
+>>>>>>> master
 
-    .right-menu{
-        img{
-            width: 30px;
-        }
+  .right-menu {
+    img {
+      width: 30px;
     }
+  }
+}
+
+.cart-counter {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: black;
+  background: red;
+  border-radius: 10px;
+}
+
+.container-link {
+  position: relative;
 }
