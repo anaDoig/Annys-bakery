@@ -6,7 +6,7 @@ const AuthState = createContext(null);
 const AuthDispatch = createContext(null);
 
 const AuthContext = ({ children }) => {
-  const [auth, setAuth] = useLocalStorage("auth", null);
+  const [auth, setAuth] = useLocalStorage("auth", { user: null, isLoading: true });
 
   const login = (user) => {
     setAuth((prev) => ({ ...prev, isLoading: true }));
@@ -16,23 +16,24 @@ const AuthContext = ({ children }) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     }).then(async (response) => {
-      console.log(response);
-      if (!response.ok) throw new Error("You shall not pass!");
+      if (!response.ok) {
+        setAuth({ user: null, isLoading: false });
+        alert("You should not pass!!");
+        throw new Error("You shall not pass!");
+      }
 
       const loggedUser = await response.json();
-      setAuth((prev) => ({ ...prev, user: loggedUser }));
+      setAuth({ isLoading: false, user: loggedUser });
     });
   };
 
   const logout = () => {
-    setAuth(null);
+    setAuth({ user: null, isLoading: false });
   };
 
   return (
     <AuthState.Provider value={auth}>
-      <AuthDispatch.Provider value={{ login, logout }}>
-        {children}
-      </AuthDispatch.Provider>
+      <AuthDispatch.Provider value={{ login, logout }}>{children}</AuthDispatch.Provider>
     </AuthState.Provider>
   );
 };
@@ -55,4 +56,6 @@ const useAuthDispatch = () => {
   return context;
 };
 
-export { AuthContext, useAuthState, useAuthDispatch };
+const useAuthContext = () => [useAuthState(), useAuthDispatch()];
+
+export { AuthContext, useAuthState, useAuthDispatch, useAuthContext };

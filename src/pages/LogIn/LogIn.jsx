@@ -15,35 +15,35 @@ const LogIn = () => {
       password: { value: password },
     } = event.target;
 
-    login({ email, password })
-      .then(() => {
-        const toRedirect = location.state?.from?.pathname || "/";
-        navigate(toRedirect);
-      })
-      .catch((error) => {
-        prompt(error);
-      });
+    login({ email, password }).then(() => {
+      const toRedirect = location.state?.from?.pathname || "/";
+      navigate(toRedirect);
+    });
   };
 
   return (
-    <section className="login">
+    <section className='login'>
       <div className='bg-green'>
         <div className='title-container'>
           <h2>Login</h2>
         </div>
       </div>
-      <div className="login-container">
-        <form onSubmit={handleSubmit} className="login">
+      <div className='login-container'>
+        <form onSubmit={handleSubmit} className='login'>
           <fieldset>
-            <label htmlFor="email" className="login__label">Username o email</label>
-            <input className="login__input" id="email" required />
+            <label htmlFor='email' className='login__label'>
+              Email
+            </label>
+            <input className='login__input' id='email' required />
           </fieldset>
           <fieldset>
-            <label htmlFor="password" className="login__label">Password</label>
-            <input className="login__input" id="password" type="password" required />
+            <label htmlFor='password' className='login__label'>
+              Password
+            </label>
+            <input className='login__input' id='password' type='password' required />
           </fieldset>
 
-          <button>LogIn</button>
+          <button>Login</button>
         </form>
       </div>
     </section>

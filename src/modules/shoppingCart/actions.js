@@ -1,19 +1,5 @@
 import { actionsTypes } from "./actionsTypes";
 
-const groupItemCart = (itemsCart) => {
-  const groupByKey = itemsCart.reduce((prev, { id, ...item }) => {
-    const key = `${item.name}_${item.size}`;
-    prev[key] ??= { ...item, quantity: 0 };
-
-    return {
-      ...prev,
-      [key]: { ...prev[key], quantity: prev[key].quantity + 1 },
-    };
-  }, {});
-
-  return Object.values(groupByKey);
-};
-
 const checkExist = async (product) => {
   const response = await fetch("http://localhost:4000/shoppingCart");
   const data = await response.json();
@@ -22,9 +8,10 @@ const checkExist = async (product) => {
 
 const addToCart = (product) => async (dispatch) => {
   dispatch({ type: actionsTypes.ADD, payload: product });
-  const isFinded = await checkExist(product);
-  if (isFinded) {
-    dispatch(updateItemCart(isFinded.id, isFinded.quantity + 1));
+  const finded = await checkExist(product);
+
+  if (finded) {
+    dispatch(updateItemCart(finded.id, finded.quantity + 1));
     return;
   }
 
