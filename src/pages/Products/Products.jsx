@@ -1,90 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCookies } from '../../modules/cookies/selectors';
-import { fetchCookies } from '../../modules/cookies/actions';
-import { getCupcakes } from '../../modules/cupcakes/selectors';
-import { fetchCupcakes } from '../../modules/cupcakes/actions';
-import { fetchCakes } from "../../modules/cakes/actions";
-import { getCakes } from "../../modules/cakes/selector";
-import ProductsComponent from '../../components/ProductsComponent/ProductsComponent';
+import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchCookies, getSliderItem } from "../../modules/cookies";
+import { fetchCupcakes } from "../../modules/cupcakes";
+import { fetchCakes } from "../../modules/cakes";
+import ProductsComponent from "../../components/ProductsComponent/ProductsComponent";
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const { cakes, cookies, cupcakes } = useSelector((state) => ({
+    cookies: getSliderItem(state, "cookies"),
+    cakes: getSliderItem(state, "cakes"),
+    cupcakes: getSliderItem(state, "cupcakes"),
+  }));
 
-    const cookiesArray = [];
-    const cakesArray = [];
-    const cupcakesArray = [];
+  useEffect(() => {
+    dispatch(fetchCookies());
+    dispatch(fetchCupcakes());
+    dispatch(fetchCakes());
+  }, []);
 
-    const cookiesTitle = 'Cookies';
-    const cookiesLink = '/cookies';
-    const cupcakesTitle = 'Cupcakes';
-    const cupcakesLink = '/cupcakes';
-    const cakesTitle = 'Cakes';
-    const cakesLink = '/cakes';
+  return (
+    <section>
+      <div className='title-container center bg-green'>
+        <h1>Nuestros Productos</h1>
+      </div>
 
-    const dispatch = useDispatch();
+      <div className='products'>
+        <ProductsComponent source={cookies} productTitle='Cookies' productLink='/cookies' />
+      </div>
 
-    const { cookies } = useSelector(getCookies);
-    const { cakes } = useSelector(getCakes);
-    const { cupcakes } = useSelector(getCupcakes);
-    
+      <div className='products bg-mauve'>
+        <ProductsComponent source={cakes} productTitle='Cakes' productLink='/cakes' />
+      </div>
 
-    useEffect(() => {
-        dispatch(fetchCookies());
-    }, []);
-
-    useEffect(() => {
-        dispatch(fetchCupcakes());
-    }, []);
-    
-    useEffect(() => {
-        dispatch(fetchCakes());
-    }, []);
-
-    for(let i = 0; i < 3; i++) {
-        cookiesArray.push(cookies[i]);
-        cupcakesArray.push(cupcakes[i]);
-        cakesArray.push(cakes[i]);
-    }
-      
-    return (
-        <section>
-            <div className='title-container center bg-green'>
-                <h1>Nuestros Productos</h1>
-            </div>
-
-            <div className='products'>
-                <ProductsComponent 
-                    array={cookiesArray} 
-                    productTitle={cookiesTitle} 
-                    productLink={cookiesLink}
-                />
-            </div>
-
-            <div className='products bg-mauve'>
-                <ProductsComponent 
-                    array={cakesArray} 
-                    productTitle={cakesTitle} 
-                    productLink={cakesLink}
-                />
-            </div>
-
-            <div className='products'>
-                <ProductsComponent 
-                    array={cupcakesArray} 
-                    productTitle={cupcakesTitle} 
-                    productLink={cupcakesLink}
-                />
-            </div>
-
-            
-            
-
-        </section>
-
-
-    )
-}
+      <div className='products'>
+        <ProductsComponent source={cupcakes} productTitle='Cupcakes' productLink='/cupcakes' />
+      </div>
+    </section>
+  );
+};
 
 export default Products;
