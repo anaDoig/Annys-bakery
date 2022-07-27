@@ -35,6 +35,7 @@ const ShoppingCart = () => {
 
   return (
     <>
+    <section className="shopping-cart">
       <div className='bg-mauve'>
         <div className='title-container'>
           <h2>Carrito</h2>
@@ -49,7 +50,7 @@ const ShoppingCart = () => {
           <li>Pago</li>
         </ul>
       </div>
-      <div className='main-container padding-top'>
+      <div className='main-container flex-one'>
         <div className='col-2'>
           <div className='col'>
             {items.length === 0 ? (
@@ -103,6 +104,7 @@ const ShoppingCart = () => {
           </div>
         </div>
       </div>
+    </section>
     </>
   );
 };

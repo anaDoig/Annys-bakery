@@ -1,7 +1,41 @@
 @import "../../assets/scss/styles.scss";
 
-.padding-top {
-  padding-top: 100px;
+
+.shopping-cart {
+  padding-bottom: 45px;
+  h4 {
+    font-size: 22px;
+  }
+
+  .breadcrumbs {
+    margin-top: 30px;
+  }
+
+  .button {
+    width: 30%;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $mauve;
+    height: 50px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition-duration: all ease 0.4s;
+
+    &:hover {
+      background-color: $darkpurple;
+      color: $mauve;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint)  {
+      width: 150px;
+    }
+  }
+
+}
+
+.flex-one {
+  flex: 1;
 }
 
 .col-2 {
@@ -32,6 +66,13 @@
   align-items: center;
   select {
     border-radius: $gutter;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint)  {
+    grid-template-columns: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
   }
 }
 
@@ -64,24 +105,9 @@
   font-size: 20px;
   line-height: 20px;
   cursor: pointer;
+  padding: 0;
 }
 
-.button {
-  width: 30%;
-  padding: 15px;
-  border: 0;
-  border-radius: 10px;
-  transition-duration: 0.4s;
-  background-color: $mauve;
-  height: 50px;
-  align-self: flex-end;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $darkpurple;
-    color: $mauve;
-  }
-}
 .section-header {
   h2 {
     margin-top: 2rem;
