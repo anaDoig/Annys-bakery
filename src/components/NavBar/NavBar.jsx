@@ -5,47 +5,54 @@ import logo from "../../assets/img/logo2.png";
 import user from "../../assets/img/user.png";
 import cart from "../../assets/img/shopping-cart.png";
 
-const getShoppingCartCounter = (state) => ({ counter: state.shoppingCart.items.length });
+const getShoppingCartCounter = (state) => ({
+  counter: state.shoppingCart.items.length,
+});
 
 export default function Navbar() {
   const { counter } = useSelector(getShoppingCartCounter);
 
-  console.log(counter);
   return (
     <header>
-      <nav className='navbar'>
-        <div className='left-menu'>
+      <nav className="navbar">
+        <div className="left-menu">
           <ul>
             <li>
-              <CustomLink to='/products'>PRODUCTS</CustomLink>
+              <CustomLink to="/products">PRODUCTOS</CustomLink>
             </li>
             <li>
-              <CustomLink to='/aboutus'>ABOUT US</CustomLink>
+              <CustomLink to="/aboutus">SOBRE NOSOTROS</CustomLink>
             </li>
             <li>
-              <CustomLink to='/contact'>CONTACT</CustomLink>
+              <CustomLink to="/contact">CONTACT0</CustomLink>
             </li>
           </ul>
         </div>
 
         <ul>
-          <CustomLink to='/'>
-            <img className='logo' src={logo} alt='logo'></img>
+          <CustomLink to="/">
+            <img className="logo" src={logo} alt="logo"></img>
           </CustomLink>
         </ul>
 
-        <div className='right-menu'>
+        <ul>
+          <CustomLink to="/">
+            <img className="logo" src={logo} alt="logo"></img>
+          </CustomLink>
+        </ul>
+
+        <div className="right-menu">
           <ul>
             <li>
-              <CustomLink to='/login'>
-                <img src={user} alt='logo'></img>
+              <CustomLink to="/login">
+                <img src={user} alt="logo"></img>
               </CustomLink>
             </li>
             <li>
-              <CustomLink to='/shoppingcart'>
+              <CustomLink to="/shoppingcart">
                 <div className="container-link">
-                  <img src={cart} alt='logo'></img>
-                  <span className='cart-counter'>{counter}</span>
+                  <img src={cart} alt="logo"></img>
+                  <span className="cart-counter">{counter}</span>
                 </div>
               </CustomLink>
             </li>

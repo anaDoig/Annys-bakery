@@ -426,5 +426,12 @@
       "unit": "und"
     }
   ],
+  "users": [
+    {
+      "email": "user@annysbakery.com",
+      "password": "$2a$10$/2HojkqqnWDaRF5E9eN2T.8lRkxNUru1d6uooT9Wu9/5Anxl.qqGa",
+      "id": 1
+    }
+  ],
   "shoppingCart": []
 }
