@@ -1,10 +1,12 @@
 import "./Footer.scss";
-import instagramIcon from "../../assets/img/instagram.png"
+import instagramIcon from "../../assets/img/instagram.png";
+import Newsletter from "../Newsletter/Newsletter";
 
 const Footer = () => {
   return (
     <footer className="bg-mauve">
       <>
+        <Newsletter />
         {/* <!-- Contact  --> */}
         <div className="social-media-container">
             <a

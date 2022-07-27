@@ -16,7 +16,7 @@ const Products = () => {
     return (
         <section>
             <div className='title-container center bg-green'>
-                <h1>Nuestros Productos</h1>
+                <h2>Nuestros Productos</h2>
             </div>
 
             <div className='products'>

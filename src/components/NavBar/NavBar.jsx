@@ -21,10 +21,10 @@ export default function Navbar() {
               <CustomLink to="/products">PRODUCTOS</CustomLink>
             </li>
             <li>
-              <CustomLink to="/aboutus">SOBRE NOSOTROS</CustomLink>
+              <CustomLink to="/aboutus">SOBRE NOSOTRAS</CustomLink>
             </li>
             <li>
-              <CustomLink to="/contact">CONTACT0</CustomLink>
+              <CustomLink to="/contact">CONTACTO</CustomLink>
             </li>
           </ul>
         </div>

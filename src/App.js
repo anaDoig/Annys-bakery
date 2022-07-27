@@ -19,7 +19,7 @@ function App() {
     <>
       <NavBar />
 
-      <div style={{ paddingTop: "50px" }}>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
