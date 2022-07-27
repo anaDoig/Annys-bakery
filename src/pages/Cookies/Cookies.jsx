@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Cookies.scss";
@@ -10,12 +9,12 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import ProductsHero from "../../components/ProductsHero/ProductsHero";
 
 const Cookies = () => {
-  
-  const title = 'Cookies';
-  const text = 'No need to play favorites! Our sample packs offer an assortment of Magnolia Bakery classics and best sellers.';
-  const link = '/products';
-  const firstLinkText = 'Productos';
-  const currentText = 'Cookies';
+  const title = "Cookies";
+  const text = "No need to play favorites! Our sample packs offer an assortment of Magnolia Bakery classics and best sellers.";
+  const link = "/products";
+  const firstLinkText = "Productos";
+  const currentText = "Cookies";
+  const newArray = [];
 
   const dispatch = useDispatch();
   const { cookies, loading, errors } = useSelector(getCookies);
@@ -34,27 +33,22 @@ const Cookies = () => {
 
   return (
     <>
-      {modalState.isOpen && (
-        <Modal setIsOpen={setModalState} selected={modalState.selected} />
-      )}
+      {modalState.isOpen && <Modal setIsOpen={setModalState} selected={modalState.selected} />}
 
-      <section className="cookies">
-        <div className="bg-green">
-          <ProductsHero 
-            title={title} 
-            text={text} 
-            link={link} 
-            firstLinkText={firstLinkText}
-            currentText={currentText} />
+      <section className='cookies'>
+        <div className='bg-green'>
+          <ProductsHero title={title} text={text} link={link} firstLinkText={firstLinkText} currentText={currentText} />
         </div>
-        <div className="main-container">
-          <div className="col-4">
+        <div className='main-container'>
+          <div className='prueba'>
+            {newArray.map((cookie) => (
+              <ProductCard key={cookie.id} product={cookie} onSelect={handleSelect} />
+            ))}
+          </div>
+
+          <div className='col-4'>
             {cookies.map((cookie) => (
-              <ProductCard
-                key={cookie.id}
-                product={cookie}
-                onSelect={handleSelect}
-              />
+              <ProductCard key={cookie.id} product={cookie} onSelect={handleSelect} />
             ))}
           </div>
         </div>
