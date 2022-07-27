@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { addToCart } from "../../modules/shoppingCart/actions";
+
+import { addToCart } from "../../modules/shoppingCart";
 import "./Modal.scss";
 
 const Modal = ({ setIsOpen, selected }) => {
@@ -15,7 +16,7 @@ const Modal = ({ setIsOpen, selected }) => {
     dispatch(
       addToCart({
         ...product,
-        size: selectValue,
+        size: selected.size[selectValue],
         price: selected.price[selectValue],
       })
     );
@@ -26,31 +27,24 @@ const Modal = ({ setIsOpen, selected }) => {
   };
 
   return (
-    <div className="modal-veil">
-      <div className="modal">
-        <div className="modal__content">
-          <span className="modal__close-modal" onClick={() => setIsOpen(false)}>
+    <div className='modal-veil'>
+      <div className='modal'>
+        <div className='modal__content'>
+          <span className='modal__close-modal' onClick={() => setIsOpen(false)}>
             X
           </span>
-          <p className="modal__title">{selected.name}</p>
+          <p className='modal__title'>{selected.name}</p>
           <form onSubmit={handleSubmit}>
-            <p className="modal__price">
-              {value ? selected.price[value] : "-"}€
-            </p>
-            <select id="size" className="modal__units" onChange={handleSelect}>
+            <p className='modal__price'>{value ? selected.price[value] : "-"}€</p>
+            <select id='size' className='modal__units' onChange={handleSelect}>
               {Object.entries(selected.size).map(([key, value]) => (
                 <option value={key}>
                   {value} {selected.unit}
                 </option>
               ))}
             </select>
-            <div className="modal__price-container">
-              {/* <div className="modal__qty">
-                <button className="modal__qty-button">-</button>
-                <span className="modal__selected-qty">1</span>
-                <button className="modal__qty-button">+</button>
-              </div> */}
-              <button className="modal__add-to-cart">Añadir</button>
+            <div className='modal__price-container'>
+              <button className='modal__add-to-cart'>Añadir</button>
             </div>
           </form>
         </div>

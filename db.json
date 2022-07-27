@@ -12,7 +12,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Letter cake",
@@ -26,7 +26,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Meme cake",
@@ -40,7 +40,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Rainbow cake",
@@ -54,7 +54,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Tennis cake",
@@ -68,7 +68,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Tropical cake",
@@ -82,7 +82,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Unicorn cake",
@@ -96,7 +96,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Universe cake",
@@ -110,7 +110,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Wedding cake",
@@ -124,7 +124,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     },
     {
       "name": "Word Party cake",
@@ -138,7 +138,7 @@
         "small": 10,
         "big": 20
       },
-      "unity": "porciones"
+      "unit": "porciones"
     }
   ],
   "cookies": [
@@ -154,7 +154,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Almond cookies",
@@ -168,7 +168,8 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und",
+      "quantity": 1
     },
     {
       "name": "Polvorones cookies",
@@ -182,7 +183,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Red Velvet cookies",
@@ -196,7 +197,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Peanuts cookies",
@@ -210,7 +211,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Sailors cookies",
@@ -224,7 +225,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Science cookies",
@@ -238,7 +239,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Unicorn cookies",
@@ -252,7 +253,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Icecream cookies",
@@ -266,7 +267,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Tropical cookies",
@@ -280,7 +281,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     }
   ],
   "cupcakes": [
@@ -296,7 +297,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Chips&cookies cupcakes",
@@ -310,7 +311,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Chocolate cupcakes",
@@ -324,7 +325,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Lemon cupcakes",
@@ -338,7 +339,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Oreo cupcakes",
@@ -352,7 +353,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Sailors cupcakes",
@@ -366,7 +367,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Unicorn cupcakes",
@@ -380,7 +381,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Owl cupcakes",
@@ -394,7 +395,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Board cupcakes",
@@ -408,7 +409,7 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
     },
     {
       "name": "Minnie cupcakes",
@@ -422,9 +423,34 @@
         "small": 6,
         "big": 12
       },
-      "unity": "und"
+      "unit": "und"
+    }
+  ],
+  "users": [
+    {
+      "email": "user@annysbakery.com",
+      "password": "$2a$10$/2HojkqqnWDaRF5E9eN2T.8lRkxNUru1d6uooT9Wu9/5Anxl.qqGa",
+      "id": 1
     }
   ],
   "shoppingCart": [
+    {
+      "name": "Nutella cookies",
+      "img": "https://i.imgur.com/CUg1ekI.jpg",
+      "price": 12,
+      "size": 6,
+      "unit": "und",
+      "quantity": 3,
+      "id": 1
+    },
+    {
+      "name": "Nutella cookies",
+      "img": "https://i.imgur.com/CUg1ekI.jpg",
+      "price": 22,
+      "size": 12,
+      "unit": "und",
+      "quantity": 1,
+      "id": 2
+    }
   ]
 }
