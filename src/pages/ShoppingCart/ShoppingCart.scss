@@ -16,7 +16,12 @@
 }
 
 .right {
-  text-align: right;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid black;
+  .button {
+    width: 100%;
+  }
 }
 
 .items_container {
@@ -44,4 +49,39 @@
 
 .remove {
   width: 15px;
+}
+
+.qty_container {
+  display: flex;
+  gap: 10px;
+}
+.bton-qty {
+  background-color: $green;
+  border: 1px solid $green;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.button {
+  width: 30%;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  background-color: $mauve;
+
+  &:hover {
+    background-color: $darkpurple;
+    color: $mauve;
+  }
+}
+.section-header {
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 }
