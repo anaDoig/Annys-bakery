@@ -47,11 +47,6 @@ const Products = () => {
         cupcakesArray.push(cupcakes[i]);
         cakesArray.push(cakes[i]);
     }
-
-    console.log(cakes);
-    console.log(cookies);
-    console.log(cookiesArray);
-    console.log(cakesArray);
       
     return (
         <section>
