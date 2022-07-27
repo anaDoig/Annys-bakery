@@ -16,6 +16,7 @@ const Cookies = () => {
   const link = '/products';
   const firstLinkText = 'Productos';
   const currentText = 'Cookies';
+  const newArray = [];
 
   const dispatch = useDispatch();
   const { cookies, loading, errors } = useSelector(getCookies);
@@ -31,6 +32,11 @@ const Cookies = () => {
   const handleSelect = (product) => {
     setModalState((prev) => ({ ...prev, selected: product, isOpen: true }));
   };
+
+  for(let i = 0; i < 3; i++) {
+    newArray.push(cookies[i]);
+    console.log(newArray);
+  }
 
   return (
     <>
@@ -48,6 +54,19 @@ const Cookies = () => {
             currentText={currentText} />
         </div>
         <div className="main-container">
+          <div className="prueba">
+          {
+            newArray.map((cookie) => (
+              <ProductCard
+                key={cookie.id}
+                product={cookie}
+                onSelect={handleSelect}
+              />
+            ))
+            
+          } 
+          </div>
+
           <div className="col-4">
             {cookies.map((cookie) => (
               <ProductCard
