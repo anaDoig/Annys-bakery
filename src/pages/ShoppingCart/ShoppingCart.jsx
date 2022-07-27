@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IconTrash } from "../../components/Icon/IconTrash";
 import { ItemCart } from "../../components/ItemCart/ItemCart";
+import { IconArrowRight } from "../../components/Icon/IconArrowRight";
 
 const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
 const ivaTotal = (subtotal) => (subtotal * 10) / 110;
@@ -37,6 +38,16 @@ const ShoppingCart = () => {
         <div className='section-header'>
           <h2>Carrito</h2>
         </div>
+      </div>
+      <div className='main-container'>
+        <ul className='breadcrumbs  center'>
+          <li>
+            {" "}
+            <a onClick={() => navigate("/products")}> Carrito</a>
+          </li>
+          <li>Datos de Envio</li>
+          <li>Pago</li>
+        </ul>
       </div>
       <div className='main-container padding-top'>
         <div className='col-2'>
@@ -79,9 +90,13 @@ const ShoppingCart = () => {
           <div className='col right'>
             <h1>TOTAL DEL CARRITO</h1>
             <div>
-              <p>Subtotal {calculateTotal(items)}</p>
+              <p>Subtotal </p>
+              <p>{calculateTotal(items)} €</p>
               <p>
-                Total {calculateTotal(items)}(incluye <span>{ivaTotal(calculateTotal(items)).toFixed(2)}</span> IVA 10%)
+                Total
+                <p>
+                  {calculateTotal(items)} € (incluye <span>{ivaTotal(calculateTotal(items)).toFixed(2)} €</span> IVA 10%)
+                </p>
               </p>
             </div>
             <button className='button '>Finalizar Compra</button>

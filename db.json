@@ -455,21 +455,12 @@
       "id": 4
     },
     {
-      "name": "Icecream cookies",
-      "img": "https://i.imgur.com/zoU80jh.png",
-      "price": 16,
-      "size": 6,
-      "unit": "und",
-      "quantity": 1,
-      "id": 5
-    },
-    {
       "name": "Tropical cookies",
       "img": "https://i.imgur.com/vSNnQkD.png",
       "price": 16,
       "size": 6,
       "unit": "und",
-      "quantity": 1,
+      "quantity": 2,
       "id": 6
     },
     {
@@ -478,8 +469,17 @@
       "price": 30,
       "size": 12,
       "unit": "und",
-      "quantity": 1,
+      "quantity": 2,
       "id": 7
+    },
+    {
+      "name": "Icecream cookies",
+      "img": "https://i.imgur.com/zoU80jh.png",
+      "price": 16,
+      "size": 6,
+      "unit": "und",
+      "quantity": 5,
+      "id": 8
     }
   ]
 }
