@@ -90,16 +90,7 @@
     vertical-align: middle;
   }
 
-  <<<<<<< HEAD &__add-to-cart {
-    font-size: 20px;
-    line-height: 20px;
-    background-color: $green;
-    border: 1px solid $green;
-    padding: 15px 0;
-    width: 40%;
-    border-radius: 10px;
-  }
-  ======= &__add-to-cart {
+  &__add-to-cart {
     font-size: 20px;
     line-height: 20px;
     background-color: $green;
@@ -111,7 +102,7 @@
       width: 100%;
     }
   }
-  >>>>>>>master &__close-modal {
+  &__close-modal {
     position: absolute;
     cursor: pointer;
     display: block;
