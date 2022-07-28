@@ -10,7 +10,7 @@ import ProductsHero from "../../components/ProductsHero/ProductsHero";
 
 const Cookies = () => {
   const title = "Cookies";
-  const text = "No need to play favorites! Our sample packs offer an assortment of Magnolia Bakery classics and best sellers.";
+  const text = "Si te gustan las galletas, en esta sección encontrarás las mas deliciosas opciones, desde las mas clásicas galletas de mantequilla hasta las de red velvet.";
   const link = "/products";
   const firstLinkText = "Productos";
   const currentText = "Cookies";

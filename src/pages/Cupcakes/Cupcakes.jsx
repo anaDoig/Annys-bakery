@@ -12,7 +12,7 @@ import ProductsHero from "../../components/ProductsHero/ProductsHero";
 const Cupcakes = () => {
 
     const title = 'Cupcakes';
-    const text = 'No need to play favorites! Our sample packs offer an assortment of Magnolia Bakery classics and best sellers.';
+    const text = 'En esta sección encuentras los cupcakes mas exquisitos y con la mejor presentación. Descubre todos nuestros sabores.';
     const link = '/products';
     const firstLinkText = 'Productos';
     const currentText = 'Cupcakes';

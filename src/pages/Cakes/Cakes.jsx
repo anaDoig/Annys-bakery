@@ -10,7 +10,7 @@ import "./Cakes.scss";
 
 const Cakes = () => {
   const title = "Tartas";
-  const text = "No need to play favorites! Our sample packs offer an assortment of Magnolia Bakery classics and best sellers.";
+  const text = "Aquí encontrarás nuestras especialidades, con diversos rellenos como nuestra famosa crema de maracuyá, o nuestros delicioso ganache de chocolate con nuestra confitura de frutos rojos.";
   const link = "/products";
   const firstLinkText = "Productos";
   const currentText = "Tartas";
