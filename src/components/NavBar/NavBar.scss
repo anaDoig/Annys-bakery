@@ -1,32 +1,35 @@
 @import "../../assets/scss/styles.scss";
 
-.navbar {
-  font-family: $main-font-regular;
-  display: flex;
-  justify-content: space-around;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+.main-header {
   position: fixed;
   width: 100%;
   background-color: white;
   z-index: 11;
   top: 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  font-family: $main-font-regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 
   ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   a {
     text-decoration: none;
     color: black;
-    margin: 20px;
 
     &:hover {
-      font-family: "robotobold";
+      font-family: $main-font-bold;
     }
   }
   .logo {
@@ -43,6 +46,30 @@
     }
   }
 
+  .submenu-container {
+    position: relative;
+
+    &:hover {
+      .submenu {
+        display: block;
+      }
+    }
+
+    .submenu {
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      border-radius: 0 0 10px 10px;
+      padding: 10px 10px 20px 20px;
+      height: auto;
+      width: 150px;
+
+      li {
+        height: 30px;
+      }
+    }
+  }
+
   .right-menu {
     img {
       width: 30px;
@@ -52,16 +79,16 @@
   .cart-counter {
     display: block;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     top: -5px;
     right: -10px;
     color: $white;
     background: red;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 25px;
 
     &::after {
       content: attr(data-counter);

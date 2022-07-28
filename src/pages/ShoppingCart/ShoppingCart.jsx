@@ -8,6 +8,7 @@ import { IconTrash } from "../../components/Icon/IconTrash";
 import { ItemCart } from "../../components/ItemCart/ItemCart";
 import { IconArrowRight } from "../../components/Icon/IconArrowRight";
 import { Link } from "react-router-dom";
+import emptyCartImg from '../../assets/img/carritovacio.png';
 
 const calculateTotal = (items) => items.reduce((total, { price, quantity }) => price * quantity + total, 0);
 const ivaTotal = (subtotal) => (subtotal * 10) / 110;
@@ -35,7 +36,7 @@ const ShoppingCart = () => {
 
   return (
     <>
-    <section className="shopping-cart">
+    <section className="shopping-cart flex-one">
       <div className='bg-mauve'>
         <div className='title-container'>
           <h2>Carrito</h2>
@@ -50,11 +51,18 @@ const ShoppingCart = () => {
           <li>Pago</li>
         </ul>
       </div>
-      <div className='main-container flex-one'>
+      <div className='main-container'>
         <div className='col-2'>
           <div className='col'>
             {items.length === 0 ? (
-              <div>Carrito Vacio</div>
+              <div className="empty-cart">
+                <figure>
+                  <img src={emptyCartImg} />
+                </figure>
+
+                <p>Carrito Vacío</p>
+              
+              </div>
             ) : (
               items.map(({ name, id, price, img, size, quantity, unit }) => (
                 <div key={id}>
@@ -89,16 +97,16 @@ const ShoppingCart = () => {
           </div>
 
           <div className='col right'>
-            <h1>TOTAL DEL CARRITO</h1>
-            <div>
-              <p>Subtotal </p>
-              <p>{calculateTotal(items)} €</p>
-              <p>
+            <h3>TOTAL DEL CARRITO</h3>
+            <div className="amount-container">
+              <p>Subtotal</p>
+              <p className="amount-container__subtotal">{calculateTotal(items)} €</p>
+              <div>
                 Total
-                <p>
-                  {calculateTotal(items)} € (incluye <span>{ivaTotal(calculateTotal(items)).toFixed(2)} €</span> IVA 10%)
+                <p className="amount-container__total">
+                  {calculateTotal(items)} € <span>(incluye {ivaTotal(calculateTotal(items)).toFixed(2)} € IVA 10%)</span>
                 </p>
-              </p>
+              </div>
             </div>
             <button className='button '>Finalizar Compra</button>
           </div>

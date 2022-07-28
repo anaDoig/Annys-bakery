@@ -1,14 +1,46 @@
 @import "../../assets/scss/styles.scss";
 
-
 .shopping-cart {
   padding-bottom: 45px;
+
+  .col-2 {
+    .col:first-child {
+      flex-basis: calc(70% - $gutter);
+      display: grid;
+      gap: $gutter;
+    }
+
+    .col:last-child {
+      flex-basis: 30%;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      gap: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   h4 {
     font-size: 22px;
   }
 
   .breadcrumbs {
-    margin-top: 30px;
+    margin: 30px 0 50px 0;
+  }
+
+  .price {
+    font-size: 22px;
+    font-family: $main-font-bold;
+  }
+
+  .size {
+    @media screen and (max-width: $mobile-breakpoint) {
+      text-align: center;
+    }
   }
 
   .button {
@@ -20,6 +52,7 @@
     height: 50px;
     align-self: flex-end;
     cursor: pointer;
+    margin-top: 40px;
     transition-duration: all ease 0.4s;
 
     &:hover {
@@ -32,21 +65,45 @@
     }
   }
 
+  .empty-cart {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+
+    figure {
+      margin: 0 auto 10px auto;
+    }
+
+    p {
+      font-family: $main-font-bold;
+    }
+  }
+
+  .amount-container {
+
+    &__subtotal {
+      font-size: 22px;
+      margin: 10px 0 20px 0;
+    }
+
+    &__total {
+      font-size: 24px;
+      font-family: $main-font-bold;
+      color: #59cc9a;
+      margin: 10px 0 20px 0;
+
+      span {
+        font-size: 16px;
+        font-family: $main-font-light;
+        color: $black;
+      }
+    }
+  }
 }
 
 .flex-one {
   flex: 1;
-}
-
-.col-2 {
-  .col:first-child {
-    flex-basis: calc(70% - $gutter);
-    display: grid;
-    gap: $gutter;
-  }
-  .col:last-child {
-    flex-basis: 30%;
-  }
 }
 
 .right {
@@ -64,15 +121,19 @@
   grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+  max-width: 525px;
+
   select {
     border-radius: $gutter;
   }
 
   @media screen and (max-width: $mobile-breakpoint)  {
-    grid-template-columns: none;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid $mauve;
+    padding: 10px;
+    border-radius: 15px;
   }
 }
 
@@ -80,6 +141,13 @@
   width: 150px;
   aspect-ratio: 1.5/1;
   border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .container-option {
@@ -95,7 +163,9 @@
 .qty_container {
   display: flex;
   gap: 10px;
+  margin-right: 20px;
 }
+
 .bton-qty {
   background-color: $green;
   border: 1px solid $green;

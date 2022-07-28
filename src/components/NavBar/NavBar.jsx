@@ -17,12 +17,24 @@ export default function Navbar() {
   const [auth, { logout }] = useAuthContext();
 
   return (
-    <header>
+    <header className="main-header">
+      <div className="main-container">
       <nav className='navbar'>
         <div className='left-menu'>
           <ul>
-            <li>
-              <CustomLink to='/products'>PRODUCTOS</CustomLink>
+            <li className="submenu-container">
+              <CustomLink  to='/products'>PRODUCTOS</CustomLink>
+              <ul className="submenu">
+                <li>
+                  <CustomLink to='/cookies'>COOKIES</CustomLink>
+                </li>
+                <li>
+                  <CustomLink to='/cakes'>TARTAS</CustomLink>
+                </li>
+                <li>
+                  <CustomLink to='/cupcakes'>CUPCAKES</CustomLink>
+                </li>
+              </ul>
             </li>
             <li>
               <CustomLink to='/aboutus'>SOBRE NOSOTRAS</CustomLink>
@@ -57,6 +69,7 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
+      </div>
     </header>
   );
 }
