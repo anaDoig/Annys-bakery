@@ -1,7 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addToCart } from '../../modules/shoppingCart/actions';
+
+import { addToCart } from '../../modules/shoppingCart';
 import './Modal.scss';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast.success('Tu producto se ha añadido');
 
 const Modal = ({ setIsOpen, selected }) => {
 	const [value, setValue] = useState(Object.keys(selected.price)[0]);
@@ -15,7 +19,7 @@ const Modal = ({ setIsOpen, selected }) => {
 		dispatch(
 			addToCart({
 				...product,
-				size: selectValue,
+				size: selected.size[selectValue],
 				price: selected.price[selectValue],
 			}),
 		);
@@ -27,6 +31,7 @@ const Modal = ({ setIsOpen, selected }) => {
 
 	return (
 		<div className="modal-veil">
+			<Toaster />
 			<div className="modal">
 				<div className="modal__content">
 					<span className="modal__close-modal" onClick={() => setIsOpen(false)}>
@@ -44,12 +49,9 @@ const Modal = ({ setIsOpen, selected }) => {
 									</option>
 								))}
 							</select>
-							{/* <div className="modal__qty">
-                <button className="modal__qty-button">-</button>
-                <span className="modal__selected-qty">1</span>
-                <button className="modal__qty-button">+</button>
-              </div> */}
-							<button className="modal__add-to-cart">Añadir</button>
+							<button className="modal__add-to-cart" onClick={notify}>
+								Añadir
+							</button>
 						</div>
 					</form>
 				</div>

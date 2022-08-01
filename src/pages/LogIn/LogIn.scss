@@ -1,0 +1,22 @@
+@import '../../assets/scss/styles.scss';
+
+.login {
+	min-height: 35vh;
+
+	.login-container {
+		width: 100%;
+		max-width: 500px;
+		margin: 80px auto 80px auto;
+		padding: 0 20px;
+	}
+
+	.login {
+		&__label {
+			display: block;
+		}
+
+		&__input {
+			width: 100%;
+		}
+	}
+}

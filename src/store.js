@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { legacy_createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
@@ -14,6 +14,6 @@ const rootReducer = combineReducers({
 	cookies: cookiesReducer,
 });
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = legacy_createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 export default store;

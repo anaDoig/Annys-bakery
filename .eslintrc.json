@@ -4,7 +4,13 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:react/jsx-runtime"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "react-app/jest"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,7 +18,11 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    }
+  },
   "plugins": ["react"],
   "rules": {
     "no-tabs": "off",
@@ -20,6 +30,11 @@
     "no-mixed-spaces-and-tabs": "error",
     "object-curly-newline": "off",
     "default-param-last": "off",
-    "react/jsx-indent": "off"
+    "react/jsx-indent": "off",
+    "import/prefer-default-export": "off",
+    "consistent-return": "off",
+    "no-restricted-exports": "off",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "react/prop-types": "off"
   }
 }

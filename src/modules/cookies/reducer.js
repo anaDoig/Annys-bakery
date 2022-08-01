@@ -8,14 +8,14 @@ export const INITIAL_STATE = {
 
 export default function cookiesReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
-	case actions.FETCH_COOKIES:
-		return { ...state, loading: true };
-	case actions.FETCH_COOKIES_OK:
-		return { ...state, cookies: action.payload };
+		case actions.FETCH_COOKIES:
+			return { ...state, loading: true };
+		case actions.FETCH_COOKIES_OK:
+			return { ...state, cookies: action.payload };
 
-	case actions.FETCH_COOKIES_ERROR:
-		return { ...state, loading: false, errors: true };
-	default:
-		return state;
+		case actions.FETCH_COOKIES_ERROR:
+			return { ...state, loading: false, errors: true };
+		default:
+			return state;
 	}
 }

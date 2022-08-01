@@ -18,11 +18,35 @@ const getListCart = () => (dispatch) => {
 		});
 };
 
-const addToCart = (product) => (dispatch) => {
+const checkExist = async (product) => {
+	const response = await fetch('http://localhost:4000/shoppingCart');
+	const data = await response.json();
+	return data.find(({ name, size }) => name === product.name && size === product.size);
+};
+
+const updateItemCart = (id, quantity) => (dispatch) => {
+	dispatch({ type: actionsTypes.UPDATE, payload: id });
+
+	return fetch(`http://localhost:4000/shoppingCart/${id}`, {
+		body: JSON.stringify({ quantity: Number(quantity) }),
+		method: 'PATCH',
+		headers: { 'Content-Type': 'application/json' },
+	}).then(() => {
+		dispatch(getListCart());
+	});
+};
+
+const addToCart = (product) => async (dispatch) => {
 	dispatch({ type: actionsTypes.ADD, payload: product });
+	const finded = await checkExist(product);
+
+	if (finded) {
+		dispatch(updateItemCart(finded.id, finded.quantity + 1));
+		return;
+	}
 
 	return fetch('http://localhost:4000/shoppingCart', {
-		body: JSON.stringify(product),
+		body: JSON.stringify({ ...product, quantity: 1 }),
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 	}).then(() => {
@@ -35,18 +59,6 @@ const removeFromCart = (id) => (dispatch) => {
 
 	return fetch(`http://localhost:4000/shoppingCart/${id}`, {
 		method: 'DELETE',
-	}).then(() => {
-		dispatch(getListCart());
-	});
-};
-
-const updateItemCart = (id, amount) => (dispatch) => {
-	dispatch({ type: actionsTypes.UPDATE, payload: id });
-
-	return fetch(`http://localhost:4000/shoppingCart/${id}`, {
-		body: JSON.stringify({ quantity: Number(amount) }),
-		method: 'PATCH',
-		headers: { 'Content-Type': 'application/json' },
 	}).then(() => {
 		dispatch(getListCart());
 	});

@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import './Form.scss';
+import './FormContact.scss';
 
 const Result = () => {
 	return <p>Tu Mensaje ha sido Enviado</p>;
 };
 
-export const Form = () => {
+export const FormContact = () => {
 	const form = useRef();
 
 	const [result, showResult] = useState(false);
@@ -32,13 +32,13 @@ export const Form = () => {
 
 	return (
 		<form ref={form} onSubmit={sendEmail}>
-			<label for="fname">First Name</label>
+			<label htmlFor="fname">First Name</label>
 			<input required type="text" id="fname" name="user_name"></input>
 
-			<label for="fname">Email</label>
+			<label htmlFor="fname">Email</label>
 			<input required type="email" id="fname" name="user_email"></input>
 
-			<label for="fname">Mensaje</label>
+			<label htmlFor="fname">Mensaje</label>
 			<textarea required type="text" id="fname" name="message"></textarea>
 
 			<button className="button" type="submit" value="Send">

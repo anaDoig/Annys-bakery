@@ -24,31 +24,7 @@ export function fetchCookies() {
 			const data = await response.json();
 			dispatch(actionFetchCookiesOk(data));
 		} catch (error) {
-			dispatch(actionFetchCookiesError);
+			dispatch(actionFetchCookiesError());
 		}
 	};
 }
-
-// export const getProducts = (cookies) => dispatch => {
-//     dispatch({ type: FETCH_PRODUCTS });
-
-//     const urlPage = url;
-
-//     fetch(url)
-//         .then((res) => res.json())
-//         .then((res) => {
-//             if (res.error) throw new Error(res.error);
-
-//             dispatch({
-//                 type: FETCH_PRODUCTS_OK,
-//                 payload: { ...res, page: urlPage },
-//             });
-//             console.log(res);
-//         })
-//         .catch((error) => {
-//             dispatch({
-//               type: FETCH_PRODUCTS_ERROR,
-//               payload: error.message,
-//             });
-//         });
-// }

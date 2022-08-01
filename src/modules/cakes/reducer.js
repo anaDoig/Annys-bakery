@@ -12,9 +12,9 @@ export default function cakesReducer(state = INITIAL_STATE, action) {
 			return { ...state, loading: true };
 		case actions.FETCH_CAKES_OK:
 			return { ...state, cakes: action.payload };
+
 		case actions.FETCH_CAKES_ERROR:
 			return { ...state, loading: false, errors: true };
-
 		default:
 			return state;
 	}
