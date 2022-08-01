@@ -26,9 +26,22 @@ describe("[UTILS]", () => {
     ["", true],
     [0, true],
     [true, true],
-  ])("isPrimitive should return true if value us typeof %s", (value, result) => {
+  ])("isPrimitive should return true if typeof of value is  %s", (value, result) => {
     const expected = isPrimitive(value);
 
     expect(expected).toBe(result);
+  });
+
+  it.each([
+    [[], true],
+    [{}, true],
+  ])("isEmpty should return true if value provided is %s", (value, result) => {
+    const expected = isEmpty(value);
+
+    expect(expected).toBe(result);
+  });
+
+  it.each([[1], [""], [true]])("isEmpty should return an error if value provided is %s", (value) => {
+    expect(() => isEmpty(value)).toThrow();
   });
 });
