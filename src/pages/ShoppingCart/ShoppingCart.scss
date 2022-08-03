@@ -1,186 +1,185 @@
-@import "../../assets/scss/styles.scss";
+@import '../../assets/scss/styles.scss';
 
 .shopping-cart {
-  padding-bottom: 45px;
+	padding-bottom: 45px;
 
-  .col-2 {
-    .col:first-child {
-      flex-basis: calc(70% - $gutter);
-      display: grid;
-      gap: $gutter;
-    }
+	.col-2 {
+		.col:first-child {
+			flex-basis: calc(70% - $gutter);
+			display: grid;
+			gap: $gutter;
+		}
 
-    .col:last-child {
-      flex-basis: 30%;
-    }
+		.col:last-child {
+			flex-basis: 30%;
+		}
 
-    @media screen and (max-width: $mobile-breakpoint) {
-      gap: 40px;
-    }
-  }
+		@media screen and (max-width: $mobile-breakpoint) {
+			gap: 40px;
+		}
+	}
 
-  h3 {
-    font-size: 24px;
-    line-height: 30px;
-  }
+	h3 {
+		font-size: 24px;
+		line-height: 30px;
+	}
 
-  h4 {
-    font-size: 22px;
-  }
+	h4 {
+		font-size: 22px;
+	}
 
-  .breadcrumbs {
-    margin: 30px 0 50px 0;
-  }
+	.breadcrumbs {
+		margin: 30px 0 50px 0;
+	}
 
-  .price {
-    font-size: 22px;
-    font-family: $main-font-bold;
-  }
+	.price {
+		font-size: 22px;
+		font-family: $main-font-bold;
+	}
 
-  .size {
-    @media screen and (max-width: $mobile-breakpoint) {
-      text-align: center;
-    }
-  }
+	.size {
+		@media screen and (max-width: $mobile-breakpoint) {
+			text-align: center;
+		}
+	}
 
-  .button {
-    width: 30%;
-    padding: 15px;
-    border: 0;
-    border-radius: 10px;
-    background-color: $mauve;
-    height: 50px;
-    align-self: flex-end;
-    cursor: pointer;
-    margin-top: 40px;
-    transition-duration: all ease 0.4s;
+	.button {
+		width: 30%;
+		padding: 15px;
+		border: 0;
+		border-radius: 10px;
+		background-color: $mauve;
+		height: 50px;
+		align-self: flex-end;
+		cursor: pointer;
+		margin-top: 40px;
+		transition-duration: all ease 0.4s;
 
-    &:hover {
-      background-color: $darkpurple;
-      color: $mauve;
-    }
+		&:hover {
+			background-color: $darkpurple;
+			color: $mauve;
+		}
 
-    @media screen and (max-width: $mobile-breakpoint)  {
-      width: 150px;
-    }
-  }
+		@media screen and (max-width: $mobile-breakpoint) {
+			width: 150px;
+		}
+	}
 
-  .empty-cart {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    text-align: center;
+	.empty-cart {
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto;
+		text-align: center;
 
-    figure {
-      margin: 0 auto 10px auto;
-    }
+		figure {
+			margin: 0 auto 10px auto;
+		}
 
-    p {
-      font-family: $main-font-bold;
-    }
-  }
+		p {
+			font-family: $main-font-bold;
+		}
+	}
 
-  .amount-container {
+	.amount-container {
+		&__subtotal {
+			font-size: 22px;
+			margin: 10px 0 20px 0;
+		}
 
-    &__subtotal {
-      font-size: 22px;
-      margin: 10px 0 20px 0;
-    }
+		&__total {
+			font-size: 24px;
+			font-family: $main-font-bold;
+			color: #59cc9a;
+			margin: 10px 0 20px 0;
 
-    &__total {
-      font-size: 24px;
-      font-family: $main-font-bold;
-      color: #59cc9a;
-      margin: 10px 0 20px 0;
-
-      span {
-        font-size: 16px;
-        font-family: $main-font-light;
-        color: $black;
-      }
-    }
-  }
+			span {
+				font-size: 16px;
+				font-family: $main-font-light;
+				color: $black;
+			}
+		}
+	}
 }
 
 .flex-one {
-  flex: 1;
+	flex: 1;
 }
 
 .right {
-  padding: 40px;
-  border-radius: 20px;
-  border: 2px solid black;
-  .button {
-    width: 100%;
-  }
+	padding: 40px;
+	border-radius: 20px;
+	border: 2px solid black;
+	.button {
+		width: 100%;
+	}
 }
 
 .items_container {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  max-width: 525px;
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	max-width: 525px;
 
-  select {
-    border-radius: $gutter;
-  }
+	select {
+		border-radius: $gutter;
+	}
 
-  @media screen and (max-width: $mobile-breakpoint)  {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 300px;
-    margin: 0 auto;
-    border: 1px solid $mauve;
-    padding: 10px;
-    border-radius: 15px;
-  }
+	@media screen and (max-width: $mobile-breakpoint) {
+		grid-template-columns: repeat(1, 1fr);
+		max-width: 300px;
+		margin: 0 auto;
+		border: 1px solid $mauve;
+		padding: 10px;
+		border-radius: 15px;
+	}
 }
 
 .image {
-  width: 150px;
-  aspect-ratio: 1.5/1;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-right: 20px;
+	width: 150px;
+	aspect-ratio: 1.5/1;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-right: 20px;
 
-  @media screen and (max-width: $mobile-breakpoint) {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+	@media screen and (max-width: $mobile-breakpoint) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
 
 .container-option {
-  h4 {
-    margin-bottom: 0;
-  }
+	h4 {
+		margin-bottom: 0;
+	}
 }
 
 .remove {
-  width: 15px;
+	width: 15px;
 }
 
 .qty_container {
-  display: flex;
-  gap: 10px;
-  margin-right: 20px;
+	display: flex;
+	gap: 10px;
+	margin-right: 20px;
 }
 
 .bton-qty {
-  background-color: $green;
-  border: 1px solid $green;
-  border-radius: 20px;
-  width: 25px;
-  height: 25px;
-  font-size: 20px;
-  line-height: 20px;
-  cursor: pointer;
-  padding: 0;
+	background-color: $green;
+	border: 1px solid $green;
+	border-radius: 20px;
+	width: 25px;
+	height: 25px;
+	font-size: 20px;
+	line-height: 20px;
+	cursor: pointer;
+	padding: 0;
 }
 
 .section-header {
-  h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
+	h2 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
 }

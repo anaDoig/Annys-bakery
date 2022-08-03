@@ -1,207 +1,205 @@
 body {
-    font-family: $main-font-regular;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $black;
+	font-family: $main-font-regular;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $black;
 }
 
 h1 {
-    @include titles(26px, 26px, 30px);
+	@include titles(26px, 26px, 30px);
 }
 
 h2 {
-    @include titles(52px, 48px, 15px);
-    @media screen and (max-width: $mobile-breakpoint)  {
-        font-size: 45px;
-    }
+	@include titles(52px, 48px, 15px);
+	@media screen and (max-width: $mobile-breakpoint) {
+		font-size: 45px;
+	}
 }
 
 h3 {
-    @include titles(40px, 42px, 25px);
+	@include titles(40px, 42px, 25px);
 
-    @media screen and (max-width: $mobile-breakpoint)  {
-        font-size: 35px;
-        line-height: 38px;
-    }
+	@media screen and (max-width: $mobile-breakpoint) {
+		font-size: 35px;
+		line-height: 38px;
+	}
 }
 
 h4 {
-    @include titles(26px, 26px, 20px);
+	@include titles(26px, 26px, 20px);
 }
 
 button {
-    padding: 15px;
-    border: 0;
-    border-radius: 10px;
-    background-color: $mauve;
-    transition: all ease 0.4s;
+	padding: 15px;
+	border: 0;
+	border-radius: 10px;
+	background-color: $mauve;
+	transition: all ease 0.4s;
 
-    &:hover {
-        background-color: $darkpurple;
-        color: $mauve;
-    }
+	&:hover {
+		background-color: $darkpurple;
+		color: $mauve;
+	}
 }
 
-
 a {
-    color: $black;
+	color: $black;
 }
 
 figure {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .bg-green {
-    background-color: $green;
+	background-color: $green;
 }
 
 .bg-mauve {
-    background-color: $mauve;
+	background-color: $mauve;
 }
 
 .bg-multicolor {
-    background-image: url('../img/bg-image.png');
-    height: 400px;
-    background-position: center; 
-    background-size: cover; 
+	background-image: url('../img/bg-image.png');
+	height: 400px;
+	background-position: center;
+	background-size: cover;
 }
 
-.title-container{
-    text-align: center;
-    padding: 135px 0 40px 0;
+.title-container {
+	text-align: center;
+	padding: 135px 0 40px 0;
 
-    @media screen and (max-width: $mobile-breakpoint)  {
-        padding: 125px 0 30px 0; 
-    }
+	@media screen and (max-width: $mobile-breakpoint) {
+		padding: 125px 0 30px 0;
+	}
 
-    h1 {
-        margin-bottom: 0;
-        font-family: $secondary-font-regular;
-        font-size: 40px;
-        line-height: 55px;
+	h1 {
+		margin-bottom: 0;
+		font-family: $secondary-font-regular;
+		font-size: 40px;
+		line-height: 55px;
 
-        @media screen and (max-width: $mobile-breakpoint)  {
-        font-size: 40px;
-    }
-    }
+		@media screen and (max-width: $mobile-breakpoint) {
+			font-size: 40px;
+		}
+	}
 }
 
 .hero-content {
-    padding-top: 30px;
+	padding-top: 30px;
 }
 
 .breadcrumbs {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 30px;
+	display: flex;
+	justify-content: left;
+	margin-bottom: 30px;
 
-    li {
-        list-style: none;
+	li {
+		list-style: none;
 
-        &:not(:last-child) {
-            &::after {
-                content: "";
-                display: inline-block;
-                width: 5px;
-                height: 5px;
-                border: 1px solid red;
-                vertical-align: middle;
-                border: solid black;
-                border-width: 0 3px 3px 0;
-                display: inline-block;
-                padding: 3px;
-                transform: rotate(-45deg);
-                margin: 0 10px;
-            }  
-        }
+		&:not(:last-child) {
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 5px;
+				height: 5px;
+				border: 1px solid red;
+				vertical-align: middle;
+				border: solid black;
+				border-width: 0 3px 3px 0;
+				display: inline-block;
+				padding: 3px;
+				transform: rotate(-45deg);
+				margin: 0 10px;
+			}
+		}
 
-        a {
-            display: inline-block;
-            position: relative;
-            &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(1);
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: $black;
-            transform-origin: bottom left;
-            transition: transform 0.35s ease-out;
-            }
+		a {
+			display: inline-block;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				transform: scaleX(1);
+				height: 2px;
+				bottom: -5px;
+				left: 0;
+				background-color: $black;
+				transform-origin: bottom left;
+				transition: transform 0.35s ease-out;
+			}
 
-            &:hover {
-                &::after {
-                    transform: scaleX(0);
-                    transform-origin: bottom right;
-                }
-            }
-        }
-    }
+			&:hover {
+				&::after {
+					transform: scaleX(0);
+					transform-origin: bottom right;
+				}
+			}
+		}
+	}
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 
-    &.center {
-        text-align: center;
-    }
+	&.center {
+		text-align: center;
+	}
 }
 
 .main-container-fullwidth {
-    width: 100%;
-    margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 
-    &.center {
-        text-align: center;
-    }
+	&.center {
+		text-align: center;
+	}
 }
 
-.section-header{
-    padding-top: 100px;
+.section-header {
+	padding-top: 100px;
 }
 
 .column-container {
-    @include display-flex($gutter, center);
+	@include display-flex($gutter, center);
 
-    .col {
-        flex-basis: calc( 25% - $gutter);
-    }
+	.col {
+		flex-basis: calc(25% - $gutter);
+	}
 }
 
 .col-2 {
-    @include display-flex(15px, space-between);
+	@include display-flex(15px, space-between);
 
-    .col {
-        flex-basis: calc( 50% - 15px);
-    }
+	.col {
+		flex-basis: calc(50% - 15px);
+	}
 }
 
 .col-3 {
-    @include display-flex(20px, space-between);
+	@include display-flex(20px, space-between);
 
-    .col {
-        flex-basis: calc( 33.3% - 20px);
-    }
+	.col {
+		flex-basis: calc(33.3% - 20px);
+	}
 }
 
 .col-4 {
-    @include display-flex(30px, space-evenly);
-    flex-wrap: wrap;
+	@include display-flex(30px, space-evenly);
+	flex-wrap: wrap;
 
-    div {
-        flex-basis: calc( 25% - 30px);
-    }
+	div {
+		flex-basis: calc(25% - 30px);
+	}
 }
-

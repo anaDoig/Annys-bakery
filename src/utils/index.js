@@ -1,5 +1,3 @@
-const getLowestPrice = (obj) => {
-    return Math.min(...Object.values(obj));
-};
+const getLowestPrice = (obj) => Math.min(...Object.values(obj));
 
 export { getLowestPrice };
