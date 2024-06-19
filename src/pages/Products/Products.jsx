@@ -1,4 +1,5 @@
 import React from "react";
+import './Products.scss';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 

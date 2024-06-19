@@ -13,8 +13,18 @@ import Cookies from "./pages/Cookies/Cookies";
 import Cupcakes from "./pages/Cupcakes/Cupcakes";
 import Cakes from "./pages/Cakes/Cakes";
 import Protected from "./components/Protected";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getListCart } from "./modules/shoppingCart";
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getListCart());
+  }, []);
+
   return (
     <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
       <NavBar />

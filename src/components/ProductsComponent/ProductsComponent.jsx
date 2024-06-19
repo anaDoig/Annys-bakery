@@ -8,7 +8,6 @@ const ProductsComponent = ({ source, link, title }) => {
 
   return (
     <section>
-      <div className='products'>
         <div className='main-container center'>
           <h2>{title}</h2>
           <Link to={link} title='Ver más' className='products__link'>
@@ -20,7 +19,6 @@ const ProductsComponent = ({ source, link, title }) => {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };

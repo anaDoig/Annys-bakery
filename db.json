@@ -449,8 +449,35 @@
       "price": 22,
       "size": 12,
       "unit": "und",
-      "quantity": 1,
+      "quantity": 2,
       "id": 2
+    },
+    {
+      "name": "Tennis cake",
+      "img": "https://i.imgur.com/dTFm1dn.jpg",
+      "price": 55,
+      "size": 10,
+      "unit": "porciones",
+      "quantity": 2,
+      "id": 4
+    },
+    {
+      "name": "Chips&cookies cupcakes",
+      "img": "https://i.imgur.com/oMH2Whr.jpg",
+      "price": 25,
+      "size": 12,
+      "unit": "und",
+      "quantity": 1,
+      "id": 5
+    },
+    {
+      "name": "Oreo cupcakes",
+      "img": "https://i.imgur.com/LkvJcnL.jpg",
+      "price": 14,
+      "size": 6,
+      "unit": "und",
+      "quantity": 1,
+      "id": 6
     }
   ]
 }

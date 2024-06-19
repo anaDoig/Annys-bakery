@@ -40,12 +40,6 @@ const Cookies = () => {
           <ProductsHero title={title} text={text} link={link} firstLinkText={firstLinkText} currentText={currentText} />
         </div>
         <div className='main-container'>
-          <div className='prueba'>
-            {newArray.map((cookie) => (
-              <ProductCard key={cookie.id} product={cookie} onSelect={handleSelect} />
-            ))}
-          </div>
-
           <div className='col-4'>
             {cookies.map((cookie) => (
               <ProductCard key={cookie.id} product={cookie} onSelect={handleSelect} />
